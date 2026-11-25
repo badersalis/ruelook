@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.vercel/
+supabase/.temp/
+supabase/.branches/
+# Personal toolkit notes stay local (the repo may be public)
+.claude/knowledge/freelancer-profile.md
+.DS_Store
+*.log
+playwright-report/
+test-results/
+
+# Internal inspiration references (never published)
+references/
+docs/design/inspiration/*
+!docs/design/inspiration/README.md

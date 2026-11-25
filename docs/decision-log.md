@@ -1,0 +1,7 @@
+# Decision Log
+
+| ID | Date | Decision | Context/options | Rationale | Consequences | Owner |
+|---|---|---|---|---|---|---|
+| D-001 | 2026-11-25 | Scope and stack for Ruelook v1: the 5 must-haves in the Launch Brief; Next.js static export + Tailwind on GitHub Pages; Supabase free tier (new project `ruelook`); local Llama `llama3.1:8b` for the AI Stylist with pre-generated demo outputs; checkout as an order request with no payment | Options: real payments (rejected: regulated, cost); hosted AI (rejected: paid); Vercel hosting (not default; Pages is free and in the toolkit) | Free, showcase-appropriate, matches the toolkit defaults | Live AI only in local dev; no payment compliance needed; anything else via change-request | Freelancer |
+| D-002 | 2026-11-25 | **GO** from the freelancer on the Launch Brief: autopilot authorized for the actions listed under "What GO authorizes"; checkpoints none | Intake complete; defaults accepted (USD, AI Stylist, light theme, unbranded stock) | Freelancer replied "go" | Autopilot runs phases 1–11; hard gates still apply | Freelancer |
+| D-003 | 2026-11-25 | Inspiration reference files (`references/`, `docs/design/inspiration/*` images) are git-ignored and never pushed to the public repo | The reference is a screenshot of a paid commercial theme | Reference files are internal-only; a public repo would republish them | The board text describes them; images stay local | Delivery Lead |
