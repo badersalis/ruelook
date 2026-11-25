@@ -8,7 +8,7 @@
 |---|---|---|
 | Cover & Showcase (`0:1`) | Cover frame (thumbnail), user flows, Behance cover / bento / social frames | ⏳ To do |
 | Design System (`2:4`) | Foundations specimen + components | ✅ Built |
-| UI Screens (`2:5`) | Mobile 390×844 and desktop 1440×1024 hi-fi screens with states; prototype notes | ⏳ To do |
+| UI Screens (`2:5`) | Mobile 390×844 and desktop 1440×1024 hi-fi screens with states; prototype notes | ⏳ Captured as PNGs in `docs/design/screens/` (17 desktop + 18 mobile); Figma import pending |
 
 The planned 9-page layout (00 Cover … 08 Showcase) is kept as named sections on these 3 pages.
 
@@ -48,11 +48,11 @@ Focus states use the two-tone ink/white ring (D-010). Touch targets are ≥44 px
 - ✅ Every colour, radius and fill in the components is bound to a variable (no hard-coded colours)
 - ✅ Contrast: ink on canvas 16.5:1; white on denim-700 and ink pass AA; signal is used only behind ink text
 - ✅ Touch targets ≥44 px
-- ⏳ Screens: all states per the ux-spec (loading, empty, error, unauthorized, success). Not built yet
+- ⏳ Screens: captured from the app in `docs/design/screens/` (empty, error, unauthorized, sold-out and success states included); Figma import pending. Capture found a contrast issue with the card heart on dark photos, now fixed
 - ⏳ Visual review screenshot of the Design System page (blocked by the call limit)
 
 ## Remaining work (resume when the call limit resets, or on a paid plan)
-1. Hi-fi screens: capture the built app (local export or live URL) with `generate_figma_design` at 390 and 1440 for home, shop, PDP + AI Stylist, bag drawer, checkout + error summary, confirmation, sign-in, account, admin. Then add the state variants.
+1. Hi-fi screens: import `docs/design/screens/*` (or capture the built app (local export or live URL) with `generate_figma_design` at 390 and 1440 for home, shop, PDP + AI Stylist, bag drawer, checkout + error summary, confirmation, sign-in, account, admin. ), then add the state variants.
 2. Cover frame and the user-flow diagram.
 3. Showcase frames (Behance 1616×1264 cover, bento, 1080×1350, 1080×1920), refreshed from live captures in phase 10.
 4. A visual review of every page, then mark phase 3 done.

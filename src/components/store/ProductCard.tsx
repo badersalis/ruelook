@@ -72,9 +72,12 @@ export function ProductCard({ product, priority = false }: { product: ProductSum
           onClick={() => wishlist.toggle(product.id)}
           aria-pressed={saved}
           aria-label={saved ? `Remove ${product.name} from wishlist` : `Save ${product.name} to wishlist`}
-          className="absolute right-1 top-1 grid size-11 place-items-center rounded-full text-ink hover:bg-white/70"
+          className="group/heart absolute right-1 top-1 grid size-11 place-items-center rounded-full text-ink"
         >
-          <Heart className={clsx("size-5", saved && "fill-ink")} aria-hidden />
+          {/* White disc keeps the ink icon legible on dark photos (WCAG 1.4.11); the 44 px button stays the target. */}
+          <span className="grid size-9 place-items-center rounded-full bg-white/85 shadow-sm transition-colors group-hover/heart:bg-white">
+            <Heart className={clsx("size-5", saved && "fill-ink")} aria-hidden />
+          </span>
         </button>
 
         {!soldOut && (
