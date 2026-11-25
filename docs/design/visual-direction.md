@@ -50,6 +50,12 @@ Wordmark: **RUELOOK** set in Archivo 900, `wdth` 125, tracking +4%, with the "O"
 - Radius: `radius.none` 0 (images, tiles: editorial hard edges), `radius.sm` 4 (inputs, chips), `radius.pill` 999 (buttons, as in #1's white CTA), `radius.lg` 16 (drawers, sheets).
 - Elevation: flat by default. `shadow.drawer` `0 24px 48px -12px rgba(14,23,38,.25)` for the cart drawer and sheets only.
 
+## Focus (amended D-010)
+Two-tone focus ring on every interactive element: `outline: 2px solid ink` + `box-shadow: 0 0 0 4px #FFFFFF` (white gap), inverted on dark/denim surfaces (white outline, ink gap). Reason: signal orange measured 2.89:1 on canvas and 1.81:1 on denim-500, which fails WCAG 1.4.11 (3:1). Signal stays an accent only.
+
+## Text over imagery (amended D-010)
+White text over `gradient.sky` mid-stop measures 3.13:1, so the hero always gets a scrim: `linear-gradient(90deg, rgba(14,23,38,.55) 0%, rgba(14,23,38,0) 60%)` behind the text column (mobile: bottom-up scrim). Each campaign photo is contrast-checked at the weakest point under the text.
+
 ## Imagery
 - Campaign: full-bleed, low-angle or eye-level street portraits, daylight, blue/neutral backdrops; people who match the audience (West African and global streetwear wearers). Unsplash, unbranded clothing only (D-003 rule: no visible third-party logos).
 - Product: centred on `color.plinth`, 4:5 ratio, consistent padding; second image (on-body or detail) shown on hover.
@@ -65,6 +71,14 @@ Wordmark: **RUELOOK** set in Archivo 900, `wdth` 125, tracking +4%, with the "O"
 | `motion.base` | 240 ms, `cubic-bezier(.2,0,0,1)` | Drawers, tab switches, image swap |
 | `motion.slow` | 560 ms, `cubic-bezier(.16,1,.3,1)` | Hero slide transitions, the "Complete the look" assembly |
 | `motion.stagger` | 60 ms | Grid and look item reveals |
+| `motion.stagger-max` | 360 ms | Cap on total stagger |
+| `motion.exit` | 160 ms, `cubic-bezier(.4,0,1,1)` | Elements leaving (drawers closing, toasts) |
+| `motion.draw` | 640 ms, `cubic-bezier(.65,0,.35,1)` | SVG connector line draw (look board) |
+| `motion.reduced` | 120 ms linear, opacity only | All reduced-motion fallbacks |
+| `motion.hero-dwell` | 6000 ms | Hero autoplay interval |
+| `ease.standard` / `ease.emphasized` | `cubic-bezier(.2,0,0,1)` / `cubic-bezier(.16,1,.3,1)` | Named easings |
+
+Prototypes and feasibility: `docs/design/prototypes/` (both Must effects: go; CSS/WAAPI only, no motion library).
 
 What moves: imagery, reveals, drawers, feedback. What never moves: prices, form fields, body text, focus rings. Every animation has a `prefers-reduced-motion` alternative (crossfade ≤120 ms or none).
 

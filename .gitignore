@@ -21,3 +21,6 @@ test-results/
 references/
 docs/design/inspiration/*
 !docs/design/inspiration/README.md
+
+# Raw Unsplash source photos (re-fetch with scripts/assets/fetch_unsplash_sources.py; processed WebP lives in Supabase Storage)
+seed/images/

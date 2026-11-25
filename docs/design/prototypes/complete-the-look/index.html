@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototype: Complete the look assembly (Ruelook)</title>
+<!--
+  THROWAWAY PROTOTYPE, not production code.
+  Signature interaction 2 from docs/design/visual-direction.md (board S3), PDP AI Stylist (AC-8).
+  Self-contained: no external requests. Fonts fall back to system faces; production uses
+  Archivo (display) and Inter (UI), both OFL, self-hosted via next/font.
+  Garments are inline SVG placeholders standing in for product photos on the plinth.
+  Look data is hard-coded demo copy, standing in for pre-generated suggestions from Supabase.
+-->
+<style>
+  :root {
+    --ink: #0E1726; --ink-soft: #4A5568; --canvas: #F7F6F3; --surface: #FFFFFF;
+    --plinth: #ECECE8; --line: #DCDBD5;
+    --denim-700: #1E3F73; --denim-500: #3767B0; --denim-100: #DCE6F5; --signal: #FF5A1F;
+    --ease-standard: cubic-bezier(.2, 0, 0, 1);
+    --ease-emphasized: cubic-bezier(.16, 1, .3, 1);
+    --dur-fast: 120ms; --dur-base: 240ms; --dur-slow: 560ms; --stagger: 60ms;
+    --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font: 16px/24px var(--font-ui); color: var(--ink); background: var(--canvas); }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  /* Two-tone focus ring: see README (signal-only ring fails 3:1 on canvas). */
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; box-shadow: 0 0 0 2px #fff; }
+
+  .proto-bar { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 8px 16px;
+    font-size: 13px; line-height: 18px; background: #fff; border-bottom: 1px solid var(--line); }
+  .proto-bar strong { font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; }
+  .proto-bar label { display: inline-flex; gap: 6px; align-items: center; }
+  .proto-bar output { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+  .proto-bar button { font: inherit; padding: 4px 10px; border: 1px solid var(--ink-soft); border-radius: 4px; background: #fff; cursor: pointer; }
+
+  .stylist { max-width: 1320px; margin: 0 auto; padding: 64px 16px 96px; }
+  @media (min-width: 720px) { .stylist { padding: 96px 24px; } }
+
+  .head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 24px; }
+  .eyebrow { margin: 0 0 8px; font: 600 12px/16px var(--font-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  .title { margin: 0; font-family: var(--font-display); font-weight: 700; font-stretch: 105%; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; letter-spacing: -.01em; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 4px;
+    background: var(--signal); color: var(--ink); font: 600 12px/1 var(--font-ui); letter-spacing: .06em; text-transform: uppercase; }
+  .chip svg { width: 14px; height: 14px; fill: var(--ink); }
+
+  /* Tabs: sliding underline (Should item "sliding tab underline", motion.base) */
+  .tabs { position: relative; display: flex; gap: 24px; box-shadow: inset 0 -1px 0 var(--line); margin-bottom: 24px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+  .tab { appearance: none; border: 0; background: none; padding: 12px 0; min-height: 44px; cursor: pointer;
+    font: 600 12px/16px var(--font-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
+  .tab[aria-selected="true"] { color: var(--ink); }
+  .tab-underline { position: absolute; left: 0; bottom: 0; height: 2px; width: 100px; background: var(--denim-500);
+    transform-origin: 0 50%; transition: transform var(--dur-base) var(--ease-standard); pointer-events: none; }
+
+  /* The board */
+  .board { position: relative; display: grid; gap: 40px 24px; padding: 24px 16px;
+    grid-template-columns: 1fr 1fr; grid-template-areas: "c c" "a b" "d e";
+    background-color: var(--surface); border: 1px solid var(--line);
+    background-image: radial-gradient(var(--line) 1px, transparent 1.4px); background-size: 16px 16px; }
+  @media (min-width: 720px) {
+    .board { grid-template-columns: 1fr 1.3fr 1fr; grid-template-areas: "a c b" "d c e"; gap: 32px 80px; padding: 40px 48px; }
+  }
+  .connectors { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 0; }
+  .connectors path { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linecap: round; }
+  .connectors circle { fill: var(--ink); }
+
+  .anchor { grid-area: c; position: relative; z-index: 1; align-self: center; justify-self: center; width: min(100%, 300px); margin: 0; }
+  .anchor .tile { outline: 2px solid var(--ink); outline-offset: -2px; }
+  .anchor-label { position: absolute; top: 8px; left: 8px; padding: 4px 8px; background: var(--ink); color: #fff;
+    font: 600 11px/14px var(--font-ui); letter-spacing: .06em; text-transform: uppercase; border-radius: 4px; }
+  .items { display: contents; list-style: none; }
+  .item { position: relative; z-index: 1; align-self: start; }
+  @media (min-width: 720px) { .item { max-width: 220px; align-self: center; } .slot-a, .slot-d { justify-self: end; } .slot-b, .slot-e { justify-self: start; } .item { width: 100%; } }
+  .slot-a { grid-area: a; } .slot-b { grid-area: b; } .slot-d { grid-area: d; } .slot-e { grid-area: e; }
+
+  .card-link { display: block; color: inherit; text-decoration: none; }
+  .tile { aspect-ratio: 4 / 5; background: var(--plinth); display: grid; place-items: center; }
+  .tile svg { width: 64%; height: 64%; }
+  .name { display: block; margin-top: 8px; font-size: 14px; line-height: 20px; font-weight: 500; }
+  .meta { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; line-height: 20px; color: var(--ink-soft); }
+  .price { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .card-link:hover .name { text-decoration: underline; text-underline-offset: 3px; }
+
+  .why { display: grid; gap: 8px 32px; margin-top: 24px; }
+  @media (min-width: 720px) { .why { grid-template-columns: 1fr auto; align-items: start; } }
+  .why h3 { margin: 0; font-size: 16px; line-height: 24px; font-weight: 600; }
+  .why p { margin: 0; color: var(--ink-soft); max-width: 60ch; }
+  .total { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .fallback { padding: 32px; border: 1px dashed var(--ink-soft); background: var(--surface); }
+  .fallback p { margin: 0 0 16px; color: var(--ink-soft); }
+  .fallback a { color: var(--denim-700); font-weight: 600; }
+
+  /* Before the board scrolls into view (JS only, so no-JS users always see the look). */
+  .board.is-waiting .item, .board.is-waiting .connectors { opacity: 0; }
+
+  @media (prefers-reduced-motion: reduce) { .tab-underline { transition: none; } }
+  .sim-reduced .tab-underline { transition: none; }
+
+  .notes { max-width: 760px; margin: 0 auto 64px; padding: 0 16px; color: var(--ink-soft); font-size: 14px; line-height: 20px; }
+  .notes h2 { color: var(--ink); font-size: 16px; }
+</style>
+</head>
+<body>
+
+<div class="proto-bar" role="region" aria-label="Prototype controls">
+  <strong>Throwaway prototype</strong>
+  <label><input type="checkbox" id="simReduce"> Simulate reduced motion</label>
+  <label><input type="checkbox" id="slowMo"> Slow motion &times;4</label>
+  <label><input type="checkbox" id="simEmpty"> Show fallback (no looks)</label>
+  <button type="button" id="replay">Replay assembly</button>
+  <output id="fps" aria-live="off">fps: …</output>
+</div>
+
+<!-- Placeholder garment silhouettes (viewBox 0 0 100 100), filled with currentColor. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="g-tee" viewBox="0 0 100 100"><path fill="currentColor" d="M32 14 L42 10 Q50 17 58 10 L68 14 L90 30 L80 44 L70 38 L70 90 L30 90 L30 38 L20 44 L10 30 Z"/></symbol>
+  <symbol id="g-jacket" viewBox="0 0 100 100"><path fill="currentColor" d="M30 12 L42 8 L50 22 L58 8 L70 12 L88 30 L92 86 L78 88 L74 46 L74 92 L26 92 L26 46 L22 88 L8 86 L12 30 Z"/><path d="M50 22 L50 92" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/></symbol>
+  <symbol id="g-pant" viewBox="0 0 100 100"><path fill="currentColor" d="M30 6 L70 6 L75 94 L56 94 L50 36 L44 94 L25 94 Z"/></symbol>
+  <symbol id="g-sneaker" viewBox="0 0 100 100"><path fill="currentColor" d="M6 64 Q8 46 22 44 L40 42 Q48 30 58 34 L70 46 Q88 50 94 62 L94 70 L6 70 Z"/><path d="M6 70 L94 70 L94 76 L6 76 Z" fill="rgba(0,0,0,.18)"/></symbol>
+  <symbol id="g-cap" viewBox="0 0 100 100"><path fill="currentColor" d="M18 62 Q20 30 50 28 Q78 30 80 58 L97 64 Q93 71 80 68 L18 68 Z"/></symbol>
+  <symbol id="g-bag" viewBox="0 0 100 100"><path fill="none" stroke="currentColor" stroke-width="5" d="M38 38 Q38 14 50 14 Q62 14 62 38"/><path fill="currentColor" d="M22 36 L78 36 L84 90 L16 90 Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></symbol>
+</svg>
+
+<main>
+  <section class="stylist" aria-labelledby="stylist-title" id="stylist">
+    <div class="head">
+      <div>
+        <p class="eyebrow">AI Stylist</p>
+        <h2 class="title" id="stylist-title">Complete the look</h2>
+      </div>
+      <span class="chip"><svg aria-hidden="true"><use href="#i-sparkle"/></svg>Suggested by AI</span>
+    </div>
+
+    <div id="withLooks">
+      <div class="tabs" role="tablist" aria-label="Suggested looks" id="tabs">
+        <button class="tab" role="tab" id="tab-0" aria-controls="panel" aria-selected="true">Look 1 &middot; Weekend uniform</button>
+        <button class="tab" role="tab" id="tab-1" aria-controls="panel" aria-selected="false" tabindex="-1">Look 2 &middot; Harmattan layers</button>
+        <button class="tab" role="tab" id="tab-2" aria-controls="panel" aria-selected="false" tabindex="-1">Look 3 &middot; After dark</button>
+        <span class="tab-underline" id="underline" aria-hidden="true"></span>
+      </div>
+
+      <div id="panel" role="tabpanel" aria-labelledby="tab-0">
+        <div class="board" id="board">
+          <svg class="connectors" id="connectors" aria-hidden="true" focusable="false"></svg>
+          <figure class="anchor" id="anchor">
+            <div class="tile" style="color:#0E1726"><svg aria-hidden="true"><use href="#g-tee"/></svg></div>
+            <span class="anchor-label">Viewing</span>
+            <figcaption>
+              <span class="name">Heavyweight Box Tee, Ink</span>
+              <span class="meta"><span>Tops</span><span class="price">$38</span></span>
+            </figcaption>
+          </figure>
+          <ul class="items" id="items" role="list"></ul>
+        </div>
+        <div class="why">
+          <div>
+            <h3 id="lookName"></h3>
+            <p id="lookWhy"></p>
+          </div>
+          <p class="total" id="lookTotal"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fallback" id="fallback" hidden>
+      <p>No styled looks for this piece yet. Our stylist is still working on it.</p>
+      <a href="#related">Browse related items</a>
+    </div>
+
+    <p class="visually-hidden" role="status" id="status"></p>
+  </section>
+
+  <section class="notes" aria-label="Prototype notes">
+    <h2>What to judge</h2>
+    <p>On first view (when the board is 35% visible) and on every look switch, the look pieces slide in from the side they sit on (from below on mobile), 60 ms apart on the 560 ms emphasized curve, and a connector draws from the viewed product to each piece. The outgoing look leaves in 160 ms. The rationale text only cross-fades: body text never moves.</p>
+    <p>Reduced motion (OS setting, or the toggle above, live): pieces fade in place in 120 ms, connectors appear already drawn.</p>
+    <p>Tabs: arrow keys, Home and End move between looks. The status line announces the look and number of pieces.</p>
+  </section>
+</main>
+
+<script>
+(() => {
+  'use strict';
+  const EMPH = 'cubic-bezier(.16,1,.3,1)';
+  const EXIT = 'cubic-bezier(.4,0,1,1)';
+  const DRAW = 'cubic-bezier(.65,0,.35,1)';   // proposed motion.draw easing
+  const DUR = { slow: 560, exit: 160, draw: 640, drawDelay: 120, stagger: 60, reduced: 120, base: 240 };
+
+  const ANCHOR_PRICE = 38;
+  const LOOKS = [
+    { name: 'Weekend uniform', why: 'The ink tee anchors mid-blue straight denim; white low-tops and a sand tote keep it light for daytime heat.',
+      items: [
+        { name: 'Straight Denim, Mid Blue', cat: 'Bottoms', price: 72, g: 'g-pant', color: '#3767B0' },
+        { name: 'Low-top Sneaker, White', cat: 'Shoes', price: 95, g: 'g-sneaker', color: '#FFFFFF' },
+        { name: 'Canvas Tote, Sand', cat: 'Bags', price: 28, g: 'g-bag', color: '#C8B48F' } ] },
+    { name: 'Harmattan layers', why: 'An olive overshirt over the tee adds a morning layer; sand cargos and a grey runner echo dusty-season tones.',
+      items: [
+        { name: 'Utility Overshirt, Olive', cat: 'Outerwear', price: 88, g: 'g-jacket', color: '#5B6B3A' },
+        { name: 'Six-panel Cap, Ink', cat: 'Accessories', price: 24, g: 'g-cap', color: '#0E1726' },
+        { name: 'Cargo Pant, Sand', cat: 'Bottoms', price: 79, g: 'g-pant', color: '#C8B48F' },
+        { name: 'Trail Runner, Slate', cat: 'Shoes', price: 110, g: 'g-sneaker', color: '#6B7280' } ] },
+    { name: 'After dark', why: 'Tonal and sharp: a charcoal pleated trouser and black court sneaker let the tee read as a clean, heavy base.',
+      items: [
+        { name: 'Pleated Trouser, Charcoal', cat: 'Bottoms', price: 84, g: 'g-pant', color: '#2E3440' },
+        { name: 'Court Sneaker, Black', cat: 'Shoes', price: 99, g: 'g-sneaker', color: '#111111' } ] },
+  ];
+
+  const $ = id => document.getElementById(id);
+  const board = $('board'), itemsEl = $('items'), svg = $('connectors'), anchor = $('anchor');
+  const tabs = [...document.querySelectorAll('.tab')], underline = $('underline');
+  const simReduce = $('simReduce'), slowMo = $('slowMo'), simEmpty = $('simEmpty');
+  const mq = matchMedia('(prefers-reduced-motion: reduce)');
+  const desktopMq = matchMedia('(min-width: 720px)');
+  const reduced = () => mq.matches || simReduce.checked;
+  const T = ms => ms * (slowMo.checked ? 4 : 1);
+  const SVGNS = 'http://www.w3.org/2000/svg';
+
+  let current = 0, running = [], token = 0;
+
+  // Seeded PRNG (mulberry32) so the hand-drawn wobble is art-directed and reproducible per look.
+  function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+  function slotsFor(n) {
+    if (!desktopMq.matches) return ['a', 'b', 'd', 'e'].slice(0, n);
+    return { 1: ['a'], 2: ['a', 'e'], 3: ['a', 'b', 'e'], 4: ['a', 'b', 'd', 'e'] }[n];
+  }
+
+  function render(i) {
+    const look = LOOKS[i], slots = slotsFor(look.items.length);
+    itemsEl.innerHTML = look.items.map((it, k) => `
+      <li class="item slot-${slots[k]}" role="listitem">
+        <a class="card-link" href="#product-${i}-${k}">
+          <div class="tile" style="color:${it.color}"><svg aria-hidden="true"><use href="#${it.g}"/></svg></div>
+          <span class="name">${it.name}</span>
+          <span class="meta"><span>${it.cat}</span><span class="price">$${it.price}</span></span>
+        </a>
+      </li>`).join('');
+    $('lookName').textContent = look.name;
+    $('lookWhy').textContent = look.why;
+    const total = ANCHOR_PRICE + look.items.reduce((s, it) => s + it.price, 0);
+    $('lookTotal').textContent = `${look.items.length + 1} pieces · $${total}`;
+    $('panel').setAttribute('aria-labelledby', `tab-${i}`);
+    buildPaths(i);
+  }
+
+  // Layout boxes relative to the board, ignoring transforms (offset* are transform-free).
+  const box = el => ({ x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight });
+
+  function buildPaths(i) {
+    const rand = rng(1009 + i * 7919);
+    svg.setAttribute('viewBox', `0 0 ${board.clientWidth} ${board.clientHeight}`);
+    svg.innerHTML = '';
+    const A = box(anchor), aTile = anchor.querySelector('.tile').offsetHeight;
+    [...itemsEl.children].forEach(li => {
+      const I = box(li), iTile = li.querySelector('.tile').offsetHeight;
+      const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+      let p0, p1, d;
+      const sideBySide = I.x + I.w <= A.x || I.x >= A.x + A.w;
+      const wob = (dist) => (rand() - .5) * Math.min(28, Math.abs(dist) * .5);
+      if (sideBySide) {
+        const left = I.x + I.w <= A.x;
+        const iy = I.y + iTile / 2;
+        p0 = { x: left ? A.x - 6 : A.x + A.w + 6, y: clamp(iy, A.y + 32, A.y + aTile - 32) };
+        p1 = { x: left ? I.x + I.w + 6 : I.x - 6, y: iy };
+        const mx = (p1.x - p0.x) / 2;
+        d = `M${p0.x} ${p0.y} C${p0.x + mx} ${p0.y + wob(mx * 2)} ${p1.x - mx} ${p1.y + wob(mx * 2)} ${p1.x} ${p1.y}`;
+      } else {
+        // Stacked layout (mobile): chain to the nearest box above in the same column, so a
+        // connector never runs behind another card's text.
+        const ix = I.x + I.w / 2;
+        const above = [...itemsEl.children].map(box).filter(B => B.y + B.h <= I.y && ix > B.x && ix < B.x + B.w)
+          .sort((m, n) => (n.y + n.h) - (m.y + m.h))[0];
+        const S = above || A;
+        p0 = { x: above ? ix : clamp(ix, A.x + 32, A.x + A.w - 32), y: S.y + S.h + 6 };
+        p1 = { x: ix, y: I.y - 6 };
+        const my = (p1.y - p0.y) / 2;
+        d = `M${p0.x} ${p0.y} C${p0.x + wob(my * 2)} ${p0.y + my} ${p1.x + wob(my * 2)} ${p1.y - my} ${p1.x} ${p1.y}`;
+      }
+      const g = document.createElementNS(SVGNS, 'g');
+      const path = document.createElementNS(SVGNS, 'path');
+      path.setAttribute('d', d);
+      const c0 = document.createElementNS(SVGNS, 'circle'); c0.setAttribute('cx', p0.x); c0.setAttribute('cy', p0.y); c0.setAttribute('r', 3);
+      const c1 = document.createElementNS(SVGNS, 'circle'); c1.setAttribute('cx', p1.x); c1.setAttribute('cy', p1.y); c1.setAttribute('r', 3); c1.classList.add('end');
+      g.append(path, c0, c1);
+      svg.append(g);
+      const len = path.getTotalLength();
+      path.style.strokeDasharray = `${len} ${len}`;   // real length (pathLength="1" is flaky in older Safari)
+      path.dataset.len = len;
+    });
+  }
+
+  function stopRunning() { running.forEach(a => a.finish()); running = []; }
+
+  function enter() {
+    board.classList.remove('is-waiting');
+    const lis = [...itemsEl.children], groups = [...svg.children];
+    const A = box(anchor), acx = A.x + A.w / 2, acy = A.y + A.h / 2;
+    const anims = [];
+    if (reduced()) {
+      const o = { duration: DUR.reduced, easing: 'linear', fill: 'both' };
+      lis.forEach(li => anims.push(li.animate({ opacity: [0, 1] }, o)));
+      anims.push(svg.animate({ opacity: [0, 1] }, o));
+    } else {
+      lis.forEach((li, k) => {
+        const I = box(li), dx = I.x + I.w / 2 - acx, dy = I.y + I.h / 2 - acy;
+        const horiz = I.x + I.w <= A.x || I.x >= A.x + A.w;
+        const from = horiz ? `translate(${Math.sign(dx) * 48}px, 0)` : `translate(0, ${Math.sign(dy) * 32}px)`;
+        anims.push(li.animate({ opacity: [0, 1], transform: [from, 'translate(0,0)'] },
+          { duration: T(DUR.slow), delay: T(k * DUR.stagger), easing: EMPH, fill: 'both' }));
+      });
+      groups.forEach((g, k) => {
+        const path = g.querySelector('path'), len = +path.dataset.len, end = g.querySelector('.end');
+        const delay = T(DUR.drawDelay + k * DUR.stagger);
+        anims.push(path.animate({ strokeDashoffset: [len, 0] }, { duration: T(DUR.draw), delay, easing: DRAW, fill: 'both' }));
+        anims.push(end.animate({ opacity: [0, 1] }, { duration: T(DUR.reduced), delay: delay + T(DUR.draw) - T(DUR.reduced), easing: 'linear', fill: 'both' }));
+      });
+    }
+    anims.push($('lookWhy').animate({ opacity: [0, 1] }, { duration: reduced() ? DUR.reduced : T(DUR.base), easing: 'linear', fill: 'both' }));
+    running = anims;
+    const my = token;
+    Promise.all(anims.map(a => a.finished)).then(() => {
+      if (my !== token) return;
+      anims.forEach(a => a.cancel()); running = [];
+    }).catch(() => {});
+  }
+
+  async function exit() {
+    const lis = [...itemsEl.children];
+    if (!lis.length) return;
+    const o = { duration: reduced() ? DUR.reduced : T(DUR.exit), easing: reduced() ? 'linear' : EXIT, fill: 'both' };
+    // Start from the current opacity so an interrupted switch never flashes back to 1.
+    const op = el => +getComputedStyle(el).opacity;
+    const anims = lis.map(li => li.animate({ opacity: [op(li), 0] }, o));
+    anims.push(svg.animate({ opacity: [op(svg), 0] }, o));
+    running = anims;
+    await Promise.all(anims.map(a => a.finished)).catch(() => {});
+  }
+
+  async function select(i, focus) {
+    if (i === current && !focus) return;
+    const my = ++token;
+    tabs.forEach((t, k) => { const on = k === i; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+    if (focus) tabs[i].focus();
+    moveUnderline();
+    if (i === current) return;
+    stopRunning();
+    current = i;
+    await exit();
+    if (my !== token) return;          // a newer switch took over
+    running.forEach(a => a.cancel()); running = [];
+    render(i);
+    enter();
+    $('status').textContent = `Showing look ${i + 1} of ${LOOKS.length}, ${LOOKS[i].name}: ${LOOKS[i].items.length + 1} pieces.`;
+  }
+
+  function moveUnderline() {
+    const t = tabs.find(x => x.getAttribute('aria-selected') === 'true') || tabs[0];
+    underline.style.width = '100px';
+    underline.style.transform = `translateX(${t.offsetLeft}px) scaleX(${t.offsetWidth / 100})`;
+  }
+
+  /* ---------- inputs ---------- */
+  tabs.forEach((t, k) => t.addEventListener('click', () => select(k)));
+  $('tabs').addEventListener('keydown', e => {
+    const n = tabs.length, at = tabs.indexOf(document.activeElement);
+    if (at < 0) return;
+    const map = { ArrowRight: (at + 1) % n, ArrowLeft: (at - 1 + n) % n, Home: 0, End: n - 1 };
+    if (e.key in map) { e.preventDefault(); select(map[e.key], true); }
+  });
+  $('replay').addEventListener('click', () => { stopRunning(); token++; render(current); enter(); });
+  simReduce.addEventListener('change', () => document.body.classList.toggle('sim-reduced', simReduce.checked));
+  simEmpty.addEventListener('change', () => {
+    $('withLooks').hidden = simEmpty.checked; $('fallback').hidden = !simEmpty.checked;
+    if (!simEmpty.checked) { render(current); moveUnderline(); }
+  });
+
+  // Re-layout: rebuild slots and paths without animating. offset* ignore transforms, so mid-animation is safe.
+  // Only re-render items when the slot map changes (mobile <-> desktop); otherwise just redraw paths,
+  // so focus inside the board survives a resize.
+  let raf = 0, wasDesktop = desktopMq.matches;
+  new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+    if (desktopMq.matches !== wasDesktop && running.length === 0) { wasDesktop = desktopMq.matches; render(current); }
+    else buildPaths(current);
+    moveUnderline();
+  }); }).observe(board);
+
+  /* ---------- first view ---------- */
+  render(0);
+  moveUnderline();
+  board.classList.add('is-waiting');
+  new IntersectionObserver((entries, io) => {
+    if (entries.some(e => e.isIntersecting)) { io.disconnect(); enter(); }
+  }, { threshold: .35 }).observe(board);
+
+  /* ---------- fps meter (prototype only) ---------- */
+  const fpsEl = $('fps');
+  let frames = 0, last = performance.now(), prev = last, longest = 0;
+  (function tick(now) {
+    frames++; longest = Math.max(longest, now - prev); prev = now;
+    if (now - last >= 1000) { fpsEl.textContent = `fps: ${Math.round(frames * 1000 / (now - last))} (longest frame ${longest.toFixed(1)} ms)`; frames = 0; last = now; longest = 0; }
+    requestAnimationFrame(tick);
+  })(last);
+
+  window.__proto = { select, replay: () => $('replay').click(), get busy() { return running.length > 0; } };
+})();
+</script>
+</body>
+</html>

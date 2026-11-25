@@ -38,9 +38,9 @@ Vibe (default): urban, editorial, confident. Theme: light.
 
 | Effect | Source (# or S#) | Where it appears | Priority (Must / Should / Nice) | Effort | Reduced-motion / fallback | Status |
 |---|---|---|---|---|---|---|
-| Hero "headline wipe" (clip-path mask wipe + staggered line rise) | 1a, S2 | Home hero | Must | M | Crossfade, no autoplay | Prototype (creative-technologist) |
-| "Complete the look" assembly (items slide onto a board, SVG connector draws in) | S3 | PDP AI Stylist | Must | M | Fade in place, static line | Prototype (creative-technologist) |
-| Add-to-bag "drop" arc + count tick | — | PDP, cards | Should | S | Count change + live region | Proposed |
+| Hero "headline wipe" (clip-path mask wipe + staggered line rise) | 1a, S2 | Home hero | Must | M | Crossfade, no autoplay | Prototyped ✅ docs/design/prototypes/hero-headline-wipe (go; transform-mask fallback if device <45 fps) |
+| "Complete the look" assembly (items slide onto a board, SVG connector draws in) | S3 | PDP AI Stylist | Must | M | Fade in place, static line | Prototyped ✅ docs/design/prototypes/complete-the-look (go) |
+| Add-to-bag "drop" arc + count tick | — | PDP, cards | Should | S | Count change + live region | Feasible (S, CSS/WAAPI) |
 | Sliding tab underline | 1b | New Arrivals, shop | Should | S | Instant move | Proposed |
 | Card hover second image + quick-add bar | 1b | Product cards | Should | S | Hover image swap without slide | Proposed |
 | Static 3% grain on campaign surfaces | 1a | Hero, promo tiles | Nice | S | n/a (static) | Proposed |
