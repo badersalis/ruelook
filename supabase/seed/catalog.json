@@ -1,0 +1,1658 @@
+{
+ "campaign": [
+  {
+   "name": "hero-01-lagos-blue",
+   "file": "seed/images/campaign/hero-01-lagos-blue.jpg",
+   "alt": "A woman in a blue jacket and headwrap by a yellow bus in Lagos",
+   "credit": "Photo by Ben Iwara on Unsplash",
+   "path": "campaign/hero-01-lagos-blue"
+  },
+  {
+   "name": "hero-02-street-leather",
+   "file": "seed/images/campaign/hero-02-street-leather.jpg",
+   "alt": "A smiling man poses in the middle of a street",
+   "credit": "Photo by Vitaly Gariev on Unsplash",
+   "path": "campaign/hero-02-street-leather"
+  },
+  {
+   "name": "hero-03-lagos-walk",
+   "file": "seed/images/campaign/hero-03-lagos-walk.jpg",
+   "alt": "A woman in a blue coat and patterned dress walking in Lagos, Nigeria",
+   "credit": "Photo by Ben Iwara on Unsplash",
+   "path": "campaign/hero-03-lagos-walk"
+  },
+  {
+   "name": "promo-women",
+   "file": "seed/images/campaign/promo-women.jpg",
+   "alt": "A person in a light blue cropped sweater and plaid skirt against a bright blue wall",
+   "credit": "Photo by Good Faces on Unsplash",
+   "path": "campaign/promo-women"
+  },
+  {
+   "name": "promo-men",
+   "file": "seed/images/campaign/promo-men.jpg",
+   "alt": "Man standing on angular concrete slabs under blue sky",
+   "credit": "Photo by Godspower Abdulahi on Unsplash",
+   "path": "campaign/promo-men"
+  },
+  {
+   "name": "promo-shoes",
+   "file": "seed/images/campaign/promo-shoes.jpg",
+   "alt": "pair of white lace-up shoes",
+   "credit": "Photo by Christian Chen on Unsplash",
+   "path": "campaign/promo-shoes"
+  },
+  {
+   "name": "promo-bags",
+   "file": "seed/images/campaign/promo-bags.jpg",
+   "alt": "A young woman with long braided hair wearing a white tank top and backpack",
+   "credit": "Photo by John Rodriguez on Unsplash",
+   "path": "campaign/promo-bags"
+  }
+ ],
+ "products": [
+  {
+   "slug": "linen-rope-belt-dress",
+   "name": "Linen Rope-Belt Mini Dress",
+   "category": "women",
+   "sub": "dresses",
+   "colour": "Off-white",
+   "hex": "#EFEBE3",
+   "price_cents": 8100,
+   "images": [
+    {
+     "path": "static/catalog/linen-rope-belt-dress/1",
+     "alt": "Linen Rope-Belt Mini Dress, off-white"
+    },
+    {
+     "path": "static/catalog/linen-rope-belt-dress/2",
+     "alt": "Linen Rope-Belt Mini Dress, off-white, detail"
+    },
+    {
+     "path": "static/catalog/linen-rope-belt-dress/3",
+     "alt": "Linen Rope-Belt Mini Dress, off-white, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 8,
+    "S": 5,
+    "M": 0,
+    "L": 15,
+    "XL": 20
+   },
+   "days_ago": 0,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "The Linen Rope-Belt Mini Dress is a simple, eye-catching design featuring a rope-belt detail at the waist. It falls just above the knee and is perfect for warm weather.",
+   "material_care": "100% linen. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "terracotta-shirt-dress",
+   "name": "Tie-Waist Shirt Dress",
+   "category": "women",
+   "sub": "dresses",
+   "colour": "Terracotta",
+   "hex": "#B5553C",
+   "price_cents": 10800,
+   "images": [
+    {
+     "path": "static/catalog/terracotta-shirt-dress/1",
+     "alt": "Tie-Waist Shirt Dress, terracotta"
+    },
+    {
+     "path": "static/catalog/terracotta-shirt-dress/2",
+     "alt": "Tie-Waist Shirt Dress, terracotta, view 2"
+    },
+    {
+     "path": "static/catalog/terracotta-shirt-dress/3",
+     "alt": "Tie-Waist Shirt Dress, terracotta, detail"
+    }
+   ],
+   "stock": {
+    "XS": 0,
+    "S": 11,
+    "M": 0,
+    "L": 22,
+    "XL": 1
+   },
+   "days_ago": 2,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A flowy terracotta dress with a tie waist, falling to a relaxed midi length. Pair with sneakers for a casual look or sandals for a more effortless vibe.",
+   "material_care": "100% cotton twill. Machine wash cold, line dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "ink-blot-wrap-dress",
+   "name": "Ink-Blot Wrap Dress",
+   "category": "women",
+   "sub": "dresses",
+   "colour": "White / black",
+   "hex": "#F4F4F2",
+   "price_cents": 9400,
+   "images": [
+    {
+     "path": "static/catalog/ink-blot-wrap-dress/1",
+     "alt": "Ink-Blot Wrap Dress, white / black"
+    },
+    {
+     "path": "static/catalog/ink-blot-wrap-dress/2",
+     "alt": "Ink-Blot Wrap Dress, white / black, detail"
+    },
+    {
+     "path": "static/catalog/ink-blot-wrap-dress/3",
+     "alt": "Ink-Blot Wrap Dress, white / black, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 5,
+    "S": 16,
+    "M": 0,
+    "L": 3,
+    "XL": 13
+   },
+   "days_ago": 2,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "The Ink-Blot Wrap Dress features a striking, all-over print on a lightweight, white background. The relaxed fit and adjustable tie at the waist make it easy to style for a casual, everyday look.",
+   "material_care": "Cotton blend. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "off-shoulder-denim-dress",
+   "name": "Off-Shoulder Denim Dress",
+   "category": "women",
+   "sub": "dresses",
+   "colour": "Light wash blue",
+   "hex": "#9DB8D6",
+   "price_cents": 11300,
+   "images": [
+    {
+     "path": "static/catalog/off-shoulder-denim-dress/1",
+     "alt": "Off-Shoulder Denim Dress, light wash blue"
+    },
+    {
+     "path": "static/catalog/off-shoulder-denim-dress/2",
+     "alt": "Off-Shoulder Denim Dress, light wash blue, detail"
+    },
+    {
+     "path": "static/catalog/off-shoulder-denim-dress/3",
+     "alt": "Off-Shoulder Denim Dress, light wash blue, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 22,
+    "S": 9,
+    "M": 0,
+    "L": 10,
+    "XL": 21
+   },
+   "days_ago": 2,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A flowy off-shoulder denim dress in a light wash blue hue. Pair with sneakers or boots for a relaxed, weekend look.",
+   "material_care": "100% cotton denim. Machine wash cold, hang to dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "ribbed-crop-tee-lilac",
+   "name": "Ribbed Cropped Tee",
+   "category": "women",
+   "sub": "tops",
+   "colour": "Lilac",
+   "hex": "#B9A3CF",
+   "price_cents": 3300,
+   "images": [
+    {
+     "path": "static/catalog/ribbed-crop-tee-lilac/1",
+     "alt": "Ribbed Cropped Tee, lilac"
+    },
+    {
+     "path": "static/catalog/ribbed-crop-tee-lilac/2",
+     "alt": "Ribbed Cropped Tee, lilac, detail"
+    },
+    {
+     "path": "static/catalog/ribbed-crop-tee-lilac/3",
+     "alt": "Ribbed Cropped Tee, lilac, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 23,
+    "S": 3,
+    "M": 14,
+    "L": 18,
+    "XL": 11
+   },
+   "days_ago": 4,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A cropped tee with ribbed texture and fitted silhouette. Pair it with high-waisted jeans and sneakers for a casual weekend look.",
+   "material_care": "100% cotton jersey. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "ribbed-crop-top-orange",
+   "name": "Ribbed Crop Top",
+   "category": "women",
+   "sub": "tops",
+   "colour": "Orange",
+   "hex": "#F06A2A",
+   "price_cents": 3100,
+   "images": [
+    {
+     "path": "static/catalog/ribbed-crop-top-orange/1",
+     "alt": "Ribbed Crop Top, orange"
+    },
+    {
+     "path": "static/catalog/ribbed-crop-top-orange/2",
+     "alt": "Ribbed Crop Top, orange, detail"
+    },
+    {
+     "path": "static/catalog/ribbed-crop-top-orange/3",
+     "alt": "Ribbed Crop Top, orange, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 6,
+    "S": 20,
+    "M": 14,
+    "L": 13,
+    "XL": 6
+   },
+   "days_ago": 6,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A cropped, fitted top with ribbed texture and orange hue, best paired with high-waisted pants or shorts for a casual look. Suitable for warm weather and everyday wear.",
+   "material_care": "100% cotton. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "faux-fur-jacket",
+   "name": "Faux Fur Cropped Jacket",
+   "category": "women",
+   "sub": "jackets",
+   "colour": "Honey brown",
+   "hex": "#B07D45",
+   "price_cents": 16100,
+   "images": [
+    {
+     "path": "static/catalog/faux-fur-jacket/1",
+     "alt": "Faux Fur Cropped Jacket, honey brown"
+    },
+    {
+     "path": "static/catalog/faux-fur-jacket/2",
+     "alt": "Faux Fur Cropped Jacket, honey brown, view 2"
+    },
+    {
+     "path": "static/catalog/faux-fur-jacket/3",
+     "alt": "Faux Fur Cropped Jacket, honey brown, view 3"
+    }
+   ],
+   "stock": {
+    "XS": 14,
+    "S": 2,
+    "M": 6,
+    "L": 22,
+    "XL": 14
+   },
+   "days_ago": 8,
+   "credits": [
+    "Photo by sammy swae on Unsplash"
+   ],
+   "description": "A cropped jacket in honey brown faux fur that adds a touch of wildness to any outfit. Pair it with distressed denim and a graphic tee for a laid-back look.",
+   "material_care": "100% polyester faux fur. Spot clean stains, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "tailored-blazer-black",
+   "name": "Relaxed Tailored Blazer",
+   "category": "women",
+   "sub": "jackets",
+   "colour": "Black",
+   "hex": "#16171A",
+   "price_cents": 12500,
+   "images": [
+    {
+     "path": "static/catalog/tailored-blazer-black/1",
+     "alt": "Relaxed Tailored Blazer, black"
+    },
+    {
+     "path": "static/catalog/tailored-blazer-black/2",
+     "alt": "Relaxed Tailored Blazer, black, detail"
+    },
+    {
+     "path": "static/catalog/tailored-blazer-black/3",
+     "alt": "Relaxed Tailored Blazer, black, close-up"
+    }
+   ],
+   "stock": {
+    "XS": 19,
+    "S": 18,
+    "M": 0,
+    "L": 0,
+    "XL": 6
+   },
+   "days_ago": 10,
+   "credits": [
+    "Photo by Ionela Mat on Unsplash"
+   ],
+   "description": "A modern take on a classic style, this tailored blazer falls softly on the body with a relaxed fit. Pair it with a crisp white shirt and trousers for a sharp, office-ready look.",
+   "material_care": "Wool blend. Dry clean only, steam for shape retention.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "heavyweight-hoodie-black",
+   "name": "Heavyweight Hoodie",
+   "category": "men",
+   "sub": "hoodies",
+   "colour": "Black",
+   "hex": "#16171A",
+   "price_cents": 10700,
+   "images": [
+    {
+     "path": "static/catalog/heavyweight-hoodie-black/1",
+     "alt": "Heavyweight Hoodie, black"
+    },
+    {
+     "path": "static/catalog/heavyweight-hoodie-black/2",
+     "alt": "Heavyweight Hoodie, black, detail"
+    },
+    {
+     "path": "static/catalog/heavyweight-hoodie-black/3",
+     "alt": "Heavyweight Hoodie, black, close-up"
+    }
+   ],
+   "stock": {
+    "S": 24,
+    "M": 18,
+    "L": 16,
+    "XL": 15,
+    "XXL": 0
+   },
+   "days_ago": 11,
+   "credits": [
+    "Photo by Bien'arts on Unsplash"
+   ],
+   "description": "A heavyweight black hoodie with a boxy fit and dropped shoulders. Wear it over a white tee with relaxed denim, or on its own as the statement piece.",
+   "material_care": "Heavyweight cotton blend. Machine wash cold, tumble dry low.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "pullover-hoodie-yellow",
+   "name": "Pullover Hoodie",
+   "category": "men",
+   "sub": "hoodies",
+   "colour": "Sun yellow",
+   "hex": "#F2C230",
+   "price_cents": 8300,
+   "images": [
+    {
+     "path": "static/catalog/pullover-hoodie-yellow/1",
+     "alt": "Pullover Hoodie, sun yellow"
+    },
+    {
+     "path": "static/catalog/pullover-hoodie-yellow/2",
+     "alt": "Pullover Hoodie, sun yellow, view 2"
+    },
+    {
+     "path": "static/catalog/pullover-hoodie-yellow/3",
+     "alt": "Pullover Hoodie, sun yellow, detail"
+    }
+   ],
+   "stock": {
+    "S": 1,
+    "M": 10,
+    "L": 8,
+    "XL": 16,
+    "XXL": 19
+   },
+   "days_ago": 11,
+   "credits": [
+    "Photo by Anastasiia Kamil on Unsplash"
+   ],
+   "description": "A sun-yellow pullover hoodie with a relaxed fit and adjustable drawcords. Pair it with distressed denim for a casual look.",
+   "material_care": "Cotton blend. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "crew-tee-navy",
+   "name": "Essential Crew Tee",
+   "category": "men",
+   "sub": "tees",
+   "colour": "Navy",
+   "hex": "#1F2A44",
+   "price_cents": 3900,
+   "images": [
+    {
+     "path": "static/catalog/crew-tee-navy/1",
+     "alt": "Essential Crew Tee, navy"
+    },
+    {
+     "path": "static/catalog/crew-tee-navy/2",
+     "alt": "Essential Crew Tee, navy, view 2"
+    },
+    {
+     "path": "static/catalog/crew-tee-navy/3",
+     "alt": "Essential Crew Tee, navy, detail"
+    }
+   ],
+   "stock": {
+    "S": 21,
+    "M": 8,
+    "L": 21,
+    "XL": 17,
+    "XXL": 16
+   },
+   "days_ago": 11,
+   "credits": [
+    "Photo by Or Hakim on Unsplash"
+   ],
+   "description": "A classic crew neck tee in navy blue. It fits close to the body, suitable for casual wear and layering.",
+   "material_care": "100% cotton jersey. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "pocket-tee-heather",
+   "name": "Pocket Tee",
+   "category": "men",
+   "sub": "tees",
+   "colour": "Heather grey",
+   "hex": "#9A9A9C",
+   "price_cents": 3600,
+   "images": [
+    {
+     "path": "static/catalog/pocket-tee-heather/1",
+     "alt": "Pocket Tee, heather grey"
+    },
+    {
+     "path": "static/catalog/pocket-tee-heather/2",
+     "alt": "Pocket Tee, heather grey, detail"
+    },
+    {
+     "path": "static/catalog/pocket-tee-heather/3",
+     "alt": "Pocket Tee, heather grey, close-up"
+    }
+   ],
+   "stock": {
+    "S": 0,
+    "M": 3,
+    "L": 2,
+    "XL": 9,
+    "XXL": 4
+   },
+   "days_ago": 12,
+   "credits": [
+    "Photo by Tau Mor on Unsplash"
+   ],
+   "description": "A classic pocket tee in heather grey. Features a relaxed fit with a functional pocket on the left chest, perfect for casual wear with jeans or shorts.",
+   "material_care": "100% cotton jersey. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "quilted-jacket-cobalt",
+   "name": "Quilted Zip Jacket",
+   "category": "men",
+   "sub": "jackets",
+   "colour": "Cobalt blue",
+   "hex": "#1F4FB0",
+   "price_cents": 17600,
+   "images": [
+    {
+     "path": "static/catalog/quilted-jacket-cobalt/1",
+     "alt": "Quilted Zip Jacket, cobalt blue"
+    },
+    {
+     "path": "static/catalog/quilted-jacket-cobalt/2",
+     "alt": "Quilted Zip Jacket, cobalt blue, detail"
+    },
+    {
+     "path": "static/catalog/quilted-jacket-cobalt/3",
+     "alt": "Quilted Zip Jacket, cobalt blue, close-up"
+    }
+   ],
+   "stock": {
+    "S": 23,
+    "M": 8,
+    "L": 20,
+    "XL": 24,
+    "XXL": 5
+   },
+   "days_ago": 14,
+   "credits": [
+    "Photo by Amit Daruka on Unsplash"
+   ],
+   "description": "A versatile quilted zip jacket in a vibrant cobalt blue hue, perfect for adding a pop of colour to any outfit. Features a fitted silhouette and adjustable cuffs for a tailored look.",
+   "material_care": "60% polyester, 40% cotton melange. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "denim-trucker-jacket",
+   "name": "Denim Trucker Jacket",
+   "category": "men",
+   "sub": "jackets",
+   "colour": "Light wash",
+   "hex": "#9DB8D6",
+   "price_cents": 17400,
+   "images": [
+    {
+     "path": "static/catalog/denim-trucker-jacket/1",
+     "alt": "Denim Trucker Jacket, light wash"
+    },
+    {
+     "path": "static/catalog/denim-trucker-jacket/2",
+     "alt": "Denim Trucker Jacket, light wash, detail"
+    },
+    {
+     "path": "static/catalog/denim-trucker-jacket/3",
+     "alt": "Denim Trucker Jacket, light wash, close-up"
+    }
+   ],
+   "stock": {
+    "S": 16,
+    "M": 16,
+    "L": 0,
+    "XL": 5,
+    "XXL": 1
+   },
+   "days_ago": 14,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A classic trucker jacket in light wash denim, perfect for everyday wear. Features button-front closure, two chest pockets, and adjustable cuffs.",
+   "material_care": "100% cotton denim. Machine wash cold, do not bleach, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "slim-chino-stone",
+   "name": "Slim Chino",
+   "category": "men",
+   "sub": "pants",
+   "colour": "Stone",
+   "hex": "#C8BCA8",
+   "price_cents": 6800,
+   "images": [
+    {
+     "path": "static/catalog/slim-chino-stone/1",
+     "alt": "Slim Chino, stone"
+    },
+    {
+     "path": "static/catalog/slim-chino-stone/2",
+     "alt": "Slim Chino, stone, view 2"
+    },
+    {
+     "path": "static/catalog/slim-chino-stone/3",
+     "alt": "Slim Chino, stone, view 3"
+    }
+   ],
+   "stock": {
+    "S": 0,
+    "M": 7,
+    "L": 0,
+    "XL": 1,
+    "XXL": 23
+   },
+   "days_ago": 14,
+   "credits": [
+    "Photo by Or Hakim on Unsplash"
+   ],
+   "description": "Slim-fit chino pants in a light stone hue. Features a slim cut through the leg and a regular rise, perfect for dressing up or down.",
+   "material_care": "100% cotton twill. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "cargo-pant-olive",
+   "name": "Utility Cargo Pant",
+   "category": "men",
+   "sub": "pants",
+   "colour": "Olive",
+   "hex": "#5E6237",
+   "price_cents": 8200,
+   "images": [
+    {
+     "path": "static/catalog/cargo-pant-olive/1",
+     "alt": "Utility Cargo Pant, olive"
+    },
+    {
+     "path": "static/catalog/cargo-pant-olive/2",
+     "alt": "Utility Cargo Pant, olive, detail"
+    },
+    {
+     "path": "static/catalog/cargo-pant-olive/3",
+     "alt": "Utility Cargo Pant, olive, close-up"
+    }
+   ],
+   "stock": {
+    "S": 23,
+    "M": 24,
+    "L": 15,
+    "XL": 19,
+    "XXL": 2
+   },
+   "days_ago": 15,
+   "credits": [
+    "Photo by MOHAMMAD AL JANNAT RAKIN on Unsplash"
+   ],
+   "description": "Utility Cargo Pant in Olive is a versatile, rugged pant with functional details like cargo pockets and reinforced seams. It fits true to size and can be dressed up or down for a casual, everyday look.",
+   "material_care": "100% cotton canvas. Machine wash cold, hang to dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "cap-toe-lace-boot",
+   "name": "Cap-Toe Lace-Up Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Dark brown",
+   "hex": "#4A3324",
+   "price_cents": 18600,
+   "images": [
+    {
+     "path": "static/catalog/cap-toe-lace-boot/1",
+     "alt": "Cap-Toe Lace-Up Boot, dark brown"
+    },
+    {
+     "path": "static/catalog/cap-toe-lace-boot/2",
+     "alt": "Cap-Toe Lace-Up Boot, dark brown, view 2"
+    },
+    {
+     "path": "static/catalog/cap-toe-lace-boot/3",
+     "alt": "Cap-Toe Lace-Up Boot, dark brown, view 3"
+    }
+   ],
+   "stock": {
+    "39": 6,
+    "40": 3,
+    "41": 12,
+    "42": 9,
+    "43": 10,
+    "44": 20,
+    "45": 21,
+    "46": 20
+   },
+   "days_ago": 17,
+   "credits": [
+    "Photo by Zac Wolff on Unsplash"
+   ],
+   "description": "Dark brown, cap-toe lace-up boot with a sleek silhouette. Made for pairing with jeans or trousers for a sharp, everyday look.",
+   "material_care": "Leather upper. Wipe clean with a damp cloth, allow to air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "slouch-boot-black",
+   "name": "Slouch Heeled Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Black",
+   "hex": "#16171A",
+   "price_cents": 17300,
+   "images": [
+    {
+     "path": "static/catalog/slouch-boot-black/1",
+     "alt": "Slouch Heeled Boot, black"
+    },
+    {
+     "path": "static/catalog/slouch-boot-black/2",
+     "alt": "Slouch Heeled Boot, black, detail"
+    },
+    {
+     "path": "static/catalog/slouch-boot-black/3",
+     "alt": "Slouch Heeled Boot, black, close-up"
+    }
+   ],
+   "stock": {
+    "39": 12,
+    "40": 9,
+    "41": 11,
+    "42": 20,
+    "43": 11,
+    "44": 10,
+    "45": 16,
+    "46": 11
+   },
+   "days_ago": 19,
+   "credits": [
+    "Photo by Christine Zhang on Unsplash"
+   ],
+   "description": "A sleek black heeled boot with a slouchy silhouette. Fitted through the ankle, it features a low block heel and chunky sole.",
+   "material_care": "Leather upper. Wipe clean with a damp cloth, allow to air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "chelsea-boot-brown",
+   "name": "Chelsea Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Chestnut",
+   "hex": "#7B4A2A",
+   "price_cents": 20800,
+   "images": [
+    {
+     "path": "static/catalog/chelsea-boot-brown/1",
+     "alt": "Chelsea Boot, chestnut"
+    },
+    {
+     "path": "static/catalog/chelsea-boot-brown/2",
+     "alt": "Chelsea Boot, chestnut, view 2"
+    },
+    {
+     "path": "static/catalog/chelsea-boot-brown/3",
+     "alt": "Chelsea Boot, chestnut, detail"
+    }
+   ],
+   "stock": {
+    "39": 4,
+    "40": 12,
+    "41": 10,
+    "42": 15,
+    "43": 15,
+    "44": 15,
+    "45": 0,
+    "46": 0
+   },
+   "days_ago": 19,
+   "credits": [
+    "Photo by Husien Bisky on Unsplash"
+   ],
+   "description": "A classic Chelsea boot in rich chestnut brown leather, perfect for casual dressing. Features an elastic side panel for easy slip-on and off.",
+   "material_care": "Leather upper. Brush regularly to maintain finish.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "chelsea-boot-black",
+   "name": "Chelsea Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Black",
+   "hex": "#16171A",
+   "price_cents": 20300,
+   "images": [
+    {
+     "path": "static/catalog/chelsea-boot-black/1",
+     "alt": "Chelsea Boot, black"
+    },
+    {
+     "path": "static/catalog/chelsea-boot-black/2",
+     "alt": "Chelsea Boot, black, detail"
+    },
+    {
+     "path": "static/catalog/chelsea-boot-black/3",
+     "alt": "Chelsea Boot, black, close-up"
+    }
+   ],
+   "stock": {
+    "39": 19,
+    "40": 23,
+    "41": 19,
+    "42": 15,
+    "43": 6,
+    "44": 7,
+    "45": 10,
+    "46": 9
+   },
+   "days_ago": 21,
+   "credits": [
+    "Photo by Jia Ye on Unsplash"
+   ],
+   "description": "A sleek black Chelsea boot with an elastic side panel for easy on-off wear. It's a versatile shoe that can be dressed up or down.",
+   "material_care": "Leather upper. Clean with a damp cloth, avoid direct sunlight.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "brogue-boot-tan",
+   "name": "Brogue Ankle Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Tan",
+   "hex": "#B27A4A",
+   "price_cents": 16700,
+   "images": [
+    {
+     "path": "static/catalog/brogue-boot-tan/1",
+     "alt": "Brogue Ankle Boot, tan"
+    },
+    {
+     "path": "static/catalog/brogue-boot-tan/2",
+     "alt": "Brogue Ankle Boot, tan, detail"
+    },
+    {
+     "path": "static/catalog/brogue-boot-tan/3",
+     "alt": "Brogue Ankle Boot, tan, close-up"
+    }
+   ],
+   "stock": {
+    "39": 16,
+    "40": 6,
+    "41": 9,
+    "42": 4,
+    "43": 2,
+    "44": 8,
+    "45": 23,
+    "46": 15
+   },
+   "days_ago": 23,
+   "credits": [
+    "Photo by Jia Ye on Unsplash"
+   ],
+   "description": "A classic ankle boot with brogue detailing, featuring a rich tan finish and a low heel. Pair with dresses or jeans for a versatile, polished look.",
+   "material_care": "Leather upper. Treat with a leather protector, then wipe clean with a damp cloth.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "combat-boot-brown",
+   "name": "Lace-Up Combat Boot",
+   "category": "shoes",
+   "sub": "boots",
+   "colour": "Brown",
+   "hex": "#5C3B26",
+   "price_cents": 17500,
+   "images": [
+    {
+     "path": "static/catalog/combat-boot-brown/1",
+     "alt": "Lace-Up Combat Boot, brown"
+    },
+    {
+     "path": "static/catalog/combat-boot-brown/2",
+     "alt": "Lace-Up Combat Boot, brown, detail"
+    },
+    {
+     "path": "static/catalog/combat-boot-brown/3",
+     "alt": "Lace-Up Combat Boot, brown, close-up"
+    }
+   ],
+   "stock": {
+    "39": 4,
+    "40": 0,
+    "41": 24,
+    "42": 0,
+    "43": 8,
+    "44": 10,
+    "45": 10,
+    "46": 0
+   },
+   "days_ago": 24,
+   "credits": [
+    "Photo by Alexander Andrews on Unsplash"
+   ],
+   "description": "A rugged combat boot with a lace-up closure and chunky sole, made for a bold statement. Worn with jeans and a leather jacket for a tough, urban look.",
+   "material_care": "100% suede upper. Spot clean stains, avoid heat or harsh chemicals. Allow to air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "canvas-low-red",
+   "name": "Canvas Low-Top Sneaker",
+   "category": "shoes",
+   "sub": "sneakers",
+   "colour": "Red",
+   "hex": "#B3262E",
+   "price_cents": 13100,
+   "images": [
+    {
+     "path": "static/catalog/canvas-low-red/1",
+     "alt": "Canvas Low-Top Sneaker, red"
+    },
+    {
+     "path": "static/catalog/canvas-low-red/2",
+     "alt": "Canvas Low-Top Sneaker, red, detail"
+    },
+    {
+     "path": "static/catalog/canvas-low-red/3",
+     "alt": "Canvas Low-Top Sneaker, red, close-up"
+    }
+   ],
+   "stock": {
+    "39": 22,
+    "40": 21,
+    "41": 8,
+    "42": 0,
+    "43": 18,
+    "44": 20,
+    "45": 20,
+    "46": 1
+   },
+   "days_ago": 26,
+   "credits": [
+    "Photo by Igal Ness on Unsplash"
+   ],
+   "description": "A low-profile sneaker crafted from premium canvas, featuring a clean, minimalist design. Wear with casual separates for a relaxed, everyday look.",
+   "material_care": "Canvas upper. Spot clean stains, avoid machine washing. Air dry or dry with a towel.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "suede-court-gum",
+   "name": "Suede Court Sneaker",
+   "category": "shoes",
+   "sub": "sneakers",
+   "colour": "Off-white / gum",
+   "hex": "#E9E2D4",
+   "price_cents": 13300,
+   "images": [
+    {
+     "path": "static/catalog/suede-court-gum/1",
+     "alt": "Suede Court Sneaker, off-white / gum"
+    },
+    {
+     "path": "static/catalog/suede-court-gum/2",
+     "alt": "Suede Court Sneaker, off-white / gum, detail"
+    },
+    {
+     "path": "static/catalog/suede-court-gum/3",
+     "alt": "Suede Court Sneaker, off-white / gum, close-up"
+    }
+   ],
+   "stock": {
+    "39": 0,
+    "40": 9,
+    "41": 8,
+    "42": 2,
+    "43": 7,
+    "44": 14,
+    "45": 20,
+    "46": 7
+   },
+   "days_ago": 26,
+   "credits": [
+    "Photo by SJ 📸 on Unsplash"
+   ],
+   "description": "A sleek and minimalist sneaker featuring a smooth suede upper in a timeless off-white and gum colour combination. Pair with casual trousers or jeans for a chic, laid-back look.",
+   "material_care": "100% suede upper. Spot clean stains, avoid water exposure, and dry at room temperature.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "leather-rucksack",
+   "name": "Leather Flap Rucksack",
+   "category": "bags",
+   "sub": "backpacks",
+   "colour": "Cognac",
+   "hex": "#8E4A2B",
+   "price_cents": 8800,
+   "images": [
+    {
+     "path": "static/catalog/leather-rucksack/1",
+     "alt": "Leather Flap Rucksack, cognac"
+    },
+    {
+     "path": "static/catalog/leather-rucksack/2",
+     "alt": "Leather Flap Rucksack, cognac, detail"
+    },
+    {
+     "path": "static/catalog/leather-rucksack/3",
+     "alt": "Leather Flap Rucksack, cognac, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 2
+   },
+   "days_ago": 26,
+   "credits": [
+    "Photo by Denisse Leon on Unsplash"
+   ],
+   "description": "A rugged leather backpack with a flap closure and adjustable shoulder straps, designed for everyday wear. The cognac color adds a touch of sophistication to its utilitarian design.",
+   "material_care": "Full-grain leather. Wipe clean with a damp cloth, allow to air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "kraft-tote",
+   "name": "Coated Kraft Tote",
+   "category": "bags",
+   "sub": "totes",
+   "colour": "Kraft brown",
+   "hex": "#A67E52",
+   "price_cents": 3800,
+   "images": [
+    {
+     "path": "static/catalog/kraft-tote/1",
+     "alt": "Coated Kraft Tote, kraft brown"
+    },
+    {
+     "path": "static/catalog/kraft-tote/2",
+     "alt": "Coated Kraft Tote, kraft brown, detail"
+    },
+    {
+     "path": "static/catalog/kraft-tote/3",
+     "alt": "Coated Kraft Tote, kraft brown, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 21
+   },
+   "days_ago": 26,
+   "credits": [
+    "Photo by Kelly Sikkema on Unsplash"
+   ],
+   "description": "A sturdy, brown tote made from a durable coated canvas. Wear it to the beach, to the office, or on-the-go.",
+   "material_care": "Coated canvas. Spot clean with a damp cloth, air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "canvas-tote-sand",
+   "name": "Everyday Canvas Tote",
+   "category": "bags",
+   "sub": "totes",
+   "colour": "Sand",
+   "hex": "#D8C9A8",
+   "price_cents": 5400,
+   "images": [
+    {
+     "path": "static/catalog/canvas-tote-sand/1",
+     "alt": "Everyday Canvas Tote, sand"
+    },
+    {
+     "path": "static/catalog/canvas-tote-sand/2",
+     "alt": "Everyday Canvas Tote, sand, view 2"
+    },
+    {
+     "path": "static/catalog/canvas-tote-sand/3",
+     "alt": "Everyday Canvas Tote, sand, detail"
+    }
+   ],
+   "stock": {
+    "One size": 23
+   },
+   "days_ago": 28,
+   "credits": [
+    "Photo by Simply Mersah on Unsplash"
+   ],
+   "description": "A sturdy, natural-colored canvas tote with a relaxed, slouchy silhouette. It's perfect for everyday use, from grocery shopping to carrying books and essentials.",
+   "material_care": "100% canvas. Spot clean stains, machine wash cold, line dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "leather-messenger",
+   "name": "Leather Utility Messenger",
+   "category": "bags",
+   "sub": "crossbody",
+   "colour": "Tan",
+   "hex": "#B27A4A",
+   "price_cents": 5800,
+   "images": [
+    {
+     "path": "static/catalog/leather-messenger/1",
+     "alt": "Leather Utility Messenger, tan"
+    },
+    {
+     "path": "static/catalog/leather-messenger/2",
+     "alt": "Leather Utility Messenger, tan, view 2"
+    },
+    {
+     "path": "static/catalog/leather-messenger/3",
+     "alt": "Leather Utility Messenger, tan, detail"
+    }
+   ],
+   "stock": {
+    "One size": 12
+   },
+   "days_ago": 30,
+   "credits": [
+    "Photo by Fauzan Fathullah on Unsplash"
+   ],
+   "description": "A versatile leather messenger bag in a warm, earthy tan hue, perfect for carrying essentials on-the-go. Adjustable strap and multiple compartments keep you organized.",
+   "material_care": "Leather. Wipe clean with a damp cloth, allow to air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "mini-satchel-grey",
+   "name": "Mini Buckle Satchel",
+   "category": "bags",
+   "sub": "crossbody",
+   "colour": "Grey",
+   "hex": "#8E8E90",
+   "price_cents": 6200,
+   "images": [
+    {
+     "path": "static/catalog/mini-satchel-grey/1",
+     "alt": "Mini Buckle Satchel, grey"
+    },
+    {
+     "path": "static/catalog/mini-satchel-grey/2",
+     "alt": "Mini Buckle Satchel, grey, detail"
+    },
+    {
+     "path": "static/catalog/mini-satchel-grey/3",
+     "alt": "Mini Buckle Satchel, grey, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 19
+   },
+   "days_ago": 30,
+   "credits": [
+    "Photo by mostafa mahmoudi on Unsplash"
+   ],
+   "description": "A compact crossbody bag featuring a sleek buckle closure and adjustable strap, perfect for daily essentials. Fits small phone, wallet, and keys.",
+   "material_care": "100% polyester. Spot clean stains, avoid heat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "zip-belt-bag-black",
+   "name": "Zip Belt Bag",
+   "category": "bags",
+   "sub": "crossbody",
+   "colour": "Black",
+   "hex": "#16171A",
+   "price_cents": 8900,
+   "images": [
+    {
+     "path": "static/catalog/zip-belt-bag-black/1",
+     "alt": "Zip Belt Bag, black"
+    },
+    {
+     "path": "static/catalog/zip-belt-bag-black/2",
+     "alt": "Zip Belt Bag, black, detail"
+    },
+    {
+     "path": "static/catalog/zip-belt-bag-black/3",
+     "alt": "Zip Belt Bag, black, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 12
+   },
+   "days_ago": 32,
+   "credits": [
+    "Photo by engin akyurt on Unsplash"
+   ],
+   "description": "A sleek and functional crossbody bag with a zip closure, designed for hands-free carry. Fits a phone, wallet, and keys, perfect for daily commutes or nights out.",
+   "material_care": "Water-resistant nylon. Machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "barrel-shoulder-bag",
+   "name": "Barrel Shoulder Bag",
+   "category": "bags",
+   "sub": "crossbody",
+   "colour": "Beige",
+   "hex": "#D2BB97",
+   "price_cents": 8300,
+   "images": [
+    {
+     "path": "static/catalog/barrel-shoulder-bag/1",
+     "alt": "Barrel Shoulder Bag, beige"
+    },
+    {
+     "path": "static/catalog/barrel-shoulder-bag/2",
+     "alt": "Barrel Shoulder Bag, beige, detail"
+    },
+    {
+     "path": "static/catalog/barrel-shoulder-bag/3",
+     "alt": "Barrel Shoulder Bag, beige, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 10
+   },
+   "days_ago": 33,
+   "credits": [
+    "Photo by Volodymyr Kozhevnikov on Unsplash"
+   ],
+   "description": "A compact shoulder bag with a relaxed fit and adjustable strap. It has a sturdy handle and a secure zip closure.",
+   "material_care": "100% cotton canvas. Spot clean stains, machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "half-moon-sling",
+   "name": "Half-Moon Sling Bag",
+   "category": "bags",
+   "sub": "crossbody",
+   "colour": "Cream",
+   "hex": "#EEE4CF",
+   "price_cents": 5500,
+   "images": [
+    {
+     "path": "static/catalog/half-moon-sling/1",
+     "alt": "Half-Moon Sling Bag, cream"
+    },
+    {
+     "path": "static/catalog/half-moon-sling/2",
+     "alt": "Half-Moon Sling Bag, cream, detail"
+    },
+    {
+     "path": "static/catalog/half-moon-sling/3",
+     "alt": "Half-Moon Sling Bag, cream, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 1
+   },
+   "days_ago": 34,
+   "credits": [
+    "Photo by Latico Leathers on Unsplash"
+   ],
+   "description": "A compact crossbody bag featuring a cream-colored canvas construction with a round half-moon shape and adjustable strap. Suitable for daily use, it can be worn with dresses or tops and jeans.",
+   "material_care": "100% canvas. Spot clean stains, machine wash cold, dry flat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "blank-cap-white",
+   "name": "Five-Panel Cap",
+   "category": "accessories",
+   "sub": "caps",
+   "colour": "White",
+   "hex": "#FAFAF8",
+   "price_cents": 3400,
+   "images": [
+    {
+     "path": "static/catalog/blank-cap-white/1",
+     "alt": "Five-Panel Cap, white"
+    },
+    {
+     "path": "static/catalog/blank-cap-white/2",
+     "alt": "Five-Panel Cap, white, detail"
+    },
+    {
+     "path": "static/catalog/blank-cap-white/3",
+     "alt": "Five-Panel Cap, white, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 0
+   },
+   "days_ago": 34,
+   "credits": [
+    "Photo by Mediamodifier on Unsplash"
+   ],
+   "description": "A classic five-panel cap with a clean design, suitable for casual everyday wear. Features a relaxed fit with an adjustable strap in the back.",
+   "material_care": "100% cotton twill. Machine wash cold, tumble dry low.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "pom-beanie-rust",
+   "name": "Chunky Pom Beanie",
+   "category": "accessories",
+   "sub": "beanies",
+   "colour": "Rust orange",
+   "hex": "#B4471F",
+   "price_cents": 2500,
+   "images": [
+    {
+     "path": "static/catalog/pom-beanie-rust/1",
+     "alt": "Chunky Pom Beanie, rust orange"
+    },
+    {
+     "path": "static/catalog/pom-beanie-rust/2",
+     "alt": "Chunky Pom Beanie, rust orange, view 2"
+    },
+    {
+     "path": "static/catalog/pom-beanie-rust/3",
+     "alt": "Chunky Pom Beanie, rust orange, detail"
+    }
+   ],
+   "stock": {
+    "One size": 2
+   },
+   "days_ago": 34,
+   "credits": [
+    "Photo by Maria Kovalets on Unsplash"
+   ],
+   "description": "A chunky beanie with a rounded shape and thick pom pom in rust orange. Fits snugly, perfect for casual days or adding a pop of color to an outfit.",
+   "material_care": "Acrylic yarn. Hand wash cold, air dry or machine dry on low heat.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "chunky-beanie-teal",
+   "name": "Chunky Rib Beanie",
+   "category": "accessories",
+   "sub": "beanies",
+   "colour": "Teal",
+   "hex": "#2F7F80",
+   "price_cents": 3400,
+   "images": [
+    {
+     "path": "static/catalog/chunky-beanie-teal/1",
+     "alt": "Chunky Rib Beanie, teal"
+    },
+    {
+     "path": "static/catalog/chunky-beanie-teal/2",
+     "alt": "Chunky Rib Beanie, teal, detail"
+    },
+    {
+     "path": "static/catalog/chunky-beanie-teal/3",
+     "alt": "Chunky Rib Beanie, teal, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 24
+   },
+   "days_ago": 35,
+   "credits": [
+    "Photo by Maria Kovalets on Unsplash"
+   ],
+   "description": "A chunky knit beanie in a vibrant teal hue, made with thick, soft yarn. It's a great addition to any winter outfit, fitting snugly over the head.",
+   "material_care": "100% acrylic knit. Hand wash in cold water, reshape while wet, air dry.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "browline-sunglasses",
+   "name": "Browline Sunglasses",
+   "category": "accessories",
+   "sub": "sunglasses",
+   "colour": "Black / gunmetal",
+   "hex": "#2A2B2E",
+   "price_cents": 7700,
+   "images": [
+    {
+     "path": "static/catalog/browline-sunglasses/1",
+     "alt": "Browline Sunglasses, black / gunmetal"
+    },
+    {
+     "path": "static/catalog/browline-sunglasses/2",
+     "alt": "Browline Sunglasses, black / gunmetal, detail"
+    },
+    {
+     "path": "static/catalog/browline-sunglasses/3",
+     "alt": "Browline Sunglasses, black / gunmetal, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 1
+   },
+   "days_ago": 35,
+   "credits": [
+    "Photo by Kiran CK on Unsplash"
+   ],
+   "description": "Classic browline sunglasses with a black frame and gunmetal hardware. A versatile everyday shape that works with tailoring and streetwear alike.",
+   "material_care": "Acetate frame, metal hardware. Hand clean with a soft cloth, avoid exposure to harsh chemicals or extreme temperatures.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "shield-sunglasses-amber",
+   "name": "Shield Sunglasses",
+   "category": "accessories",
+   "sub": "sunglasses",
+   "colour": "Black / amber mirror",
+   "hex": "#C98A2B",
+   "price_cents": 7300,
+   "images": [
+    {
+     "path": "static/catalog/shield-sunglasses-amber/1",
+     "alt": "Shield Sunglasses, black / amber mirror"
+    },
+    {
+     "path": "static/catalog/shield-sunglasses-amber/2",
+     "alt": "Shield Sunglasses, black / amber mirror, detail"
+    },
+    {
+     "path": "static/catalog/shield-sunglasses-amber/3",
+     "alt": "Shield Sunglasses, black / amber mirror, close-up"
+    }
+   ],
+   "stock": {
+    "One size": 7
+   },
+   "days_ago": 36,
+   "credits": [
+    "Photo by wilson montoya on Unsplash"
+   ],
+   "description": "Shield sunglasses in black with amber mirror lenses offer a sleek, minimalist silhouette that suits everyday wear. The matte black frame and subtle lens tint add a touch of sophistication to any outfit.",
+   "material_care": "Acetate frame. Hand wash with mild soap, dry with a soft cloth.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "textured-socks-trio",
+   "name": "Textured Crew Socks (3-pack)",
+   "category": "accessories",
+   "sub": "socks",
+   "colour": "Grey / purple / yellow",
+   "hex": "#8A6BA8",
+   "price_cents": 2300,
+   "images": [
+    {
+     "path": "static/catalog/textured-socks-trio/1",
+     "alt": "Textured Crew Socks (3-pack), grey / purple / yellow"
+    },
+    {
+     "path": "static/catalog/textured-socks-trio/2",
+     "alt": "Textured Crew Socks (3-pack), grey / purple / yellow, detail"
+    },
+    {
+     "path": "static/catalog/textured-socks-trio/3",
+     "alt": "Textured Crew Socks (3-pack), grey / purple / yellow, close-up"
+    }
+   ],
+   "stock": {
+    "S/M": 3,
+    "L/XL": 9
+   },
+   "days_ago": 37,
+   "credits": [
+    "Photo by Mockup Graphics on Unsplash"
+   ],
+   "description": "Textured crew socks in a 3-pack featuring a grey, purple, and yellow color palette. Pair with sneakers or boots for a subtle yet stylish touch.",
+   "material_care": "Cotton blend. Machine wash cold, tumble dry low.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "cuban-chain-gold",
+   "name": "Cuban Link Chain",
+   "category": "accessories",
+   "sub": "jewellery",
+   "colour": "Gold tone",
+   "hex": "#C9A54C",
+   "price_cents": 5800,
+   "images": [
+    {
+     "path": "static/catalog/cuban-chain-gold/1",
+     "alt": "Cuban Link Chain, gold tone"
+    },
+    {
+     "path": "static/catalog/cuban-chain-gold/2",
+     "alt": "Cuban Link Chain, gold tone, detail"
+    },
+    {
+     "path": "static/catalog/cuban-chain-gold/3",
+     "alt": "Cuban Link Chain, gold tone, close-up"
+    }
+   ],
+   "stock": {
+    "45 cm": 16,
+    "50 cm": 10
+   },
+   "days_ago": 38,
+   "credits": [
+    "Photo by Oscar Ramirez on Unsplash"
+   ],
+   "description": "A delicate gold-toned chain with a Cuban link design, perfect for layering with other necklaces or wearing solo. Can be worn with casual or dressy outfits.",
+   "material_care": "Gold-plated brass. Avoid exposure to water or harsh chemicals, and clean with a soft cloth.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  },
+  {
+   "slug": "fine-chain-set-gold",
+   "name": "Fine Chain Necklace Set",
+   "category": "accessories",
+   "sub": "jewellery",
+   "colour": "Gold tone",
+   "hex": "#C9A54C",
+   "price_cents": 7300,
+   "images": [
+    {
+     "path": "static/catalog/fine-chain-set-gold/1",
+     "alt": "Fine Chain Necklace Set, gold tone"
+    },
+    {
+     "path": "static/catalog/fine-chain-set-gold/2",
+     "alt": "Fine Chain Necklace Set, gold tone, detail"
+    },
+    {
+     "path": "static/catalog/fine-chain-set-gold/3",
+     "alt": "Fine Chain Necklace Set, gold tone, close-up"
+    }
+   ],
+   "stock": {
+    "45 cm": 0,
+    "50 cm": 14
+   },
+   "days_ago": 39,
+   "credits": [
+    "Photo by Tahlia Doyle on Unsplash"
+   ],
+   "description": "A delicate chain necklace set in a gold tone finish. Features multiple links and a minimalist design, perfect for layering or wearing solo.",
+   "material_care": "Plated metal. Avoid exposure to water or harsh chemicals. Store in a cool, dry place.",
+   "copy_meta": {
+    "model": "llama3.1:8b",
+    "prompt_version": "copy-v1",
+    "reviewed": "2026-11-25 Delivery Lead"
+   }
+  }
+ ]
+}

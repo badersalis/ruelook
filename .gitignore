@@ -22,5 +22,7 @@ references/
 docs/design/inspiration/*
 !docs/design/inspiration/README.md
 
-# Raw Unsplash source photos (re-fetch with scripts/assets/fetch_unsplash_sources.py; processed WebP lives in Supabase Storage)
+# Raw Unsplash source photos (re-fetch with scripts/assets/fetch_unsplash_sources.py; processed WebP derivatives live in public/ (D-011))
 seed/images/
+*.tsbuildinfo
+next-env.d.ts

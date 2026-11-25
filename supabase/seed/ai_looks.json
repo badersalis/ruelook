@@ -1,0 +1,351 @@
+{
+ "tailored-blazer-black": {
+  "product_id": "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+  "looks": [
+   {
+    "title": "Weekend in the City",
+    "rationale": "Neutral colours and textures create a relaxed, weekend look.",
+    "item_ids": [
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452",
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12"
+    ]
+   },
+   {
+    "title": "Streetwear Chic",
+    "rationale": "Bold colours and contrasting textures create a stylish streetwear look.",
+    "item_ids": [
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "c79e162a-66ba-46a8-b135-f8419ed077cd",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   },
+   {
+    "title": "Casual Afternoon",
+    "rationale": "Soft colours and comfortable fabrics create a relaxed, casual look.",
+    "item_ids": [
+     "bb541292-07d7-4b1b-8177-de138f1d949d",
+     "c7b18836-6904-4e7c-a024-0f5701616280",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09"
+    ]
+   }
+  ]
+ },
+ "faux-fur-jacket": {
+  "product_id": "c6635615-4e50-4559-b3bb-3f51a29ae5e5",
+  "looks": [
+   {
+    "title": "Cozy Winter Morning",
+    "rationale": "Soft textures and warm colours evoke a cozy atmosphere.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "c7b18836-6904-4e7c-a024-0f5701616280",
+     "0148a9a5-be35-408a-9344-d18ed5f129d5",
+     "bb541292-07d7-4b1b-8177-de138f1d949d"
+    ]
+   },
+   {
+    "title": "Urban Oasis",
+    "rationale": "Neutral colours and natural textures create a calming urban oasis.",
+    "item_ids": [
+     "c79e162a-66ba-46a8-b135-f8419ed077cd",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Rustic Getaway",
+    "rationale": "Earth-toned colours and natural textures evoke a rustic atmosphere.",
+    "item_ids": [
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "1a98348f-41ae-4182-abfe-a2283c11f9ae",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "40d61580-892b-443d-8240-96ea5a4fc596"
+    ]
+   }
+  ]
+ },
+ "ribbed-crop-top-orange": {
+  "product_id": "78bdbb4c-9a25-492b-b30b-d3737926b79d",
+  "looks": [
+   {
+    "title": "Cozy Night In",
+    "rationale": "The chunky pom beanie matches the orange crop top, while the utility cargo pant adds a relaxed fit.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4"
+    ]
+   },
+   {
+    "title": "Casual Day Out",
+    "rationale": "The essential crew tee pairs with the orange crop top, while the chunky rib beanie adds a pop of color.",
+    "item_ids": [
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "c491cb4c-e720-4488-bb0c-c6667d6b7fce"
+    ]
+   },
+   {
+    "title": "Streetwear Chic",
+    "rationale": "The fine chain necklace set matches the orange color of the crop top, while the leather flap rucksack adds a trendy touch.",
+    "item_ids": [
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452",
+     "46a1dfb6-a9d2-45c5-945d-14805601f4a8"
+    ]
+   }
+  ]
+ },
+ "ribbed-crop-tee-lilac": {
+  "product_id": "6a790c46-62ca-4e71-b254-d96ea861f922",
+  "looks": [
+   {
+    "title": "Winter Morning",
+    "rationale": "Lilac tee pairs with earthy tones and textures.",
+    "item_ids": [
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "67ba88df-d68f-4088-a091-28a1a83a124f"
+    ]
+   },
+   {
+    "title": "Cobalt Nights",
+    "rationale": "Lilac tee matches the bold blue and creates a striking contrast.",
+    "item_ids": [
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "c79e162a-66ba-46a8-b135-f8419ed077cd"
+    ]
+   },
+   {
+    "title": "Sunday Funday",
+    "rationale": "Lilac tee pairs with casual, laid-back pieces.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "a3eb4932-1254-42c2-8772-73a1a31c9e6a"
+    ]
+   }
+  ]
+ },
+ "off-shoulder-denim-dress": {
+  "product_id": "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+  "looks": [
+   {
+    "title": "Sunday Afternoon",
+    "rationale": "Neutral colours and casual fit",
+    "item_ids": [
+     "ad8fcdd0-7429-4f6d-8f81-af21e9bd052f",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Casual Brunch",
+    "rationale": "Contrasting textures and earthy tones",
+    "item_ids": [
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "67ba88df-d68f-4088-a091-28a1a83a124f"
+    ]
+   },
+   {
+    "title": "Winter Nights",
+    "rationale": "Dark colours and layered fit",
+    "item_ids": [
+     "5f0d6c38-df85-4f86-a415-c0cce17a4958",
+     "c79e162a-66ba-46a8-b135-f8419ed077cd",
+     "209d5d2b-7ffb-4853-b718-35366483a666"
+    ]
+   }
+  ]
+ },
+ "ink-blot-wrap-dress": {
+  "product_id": "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+  "looks": [
+   {
+    "title": "Urban Oasis",
+    "rationale": "Contrasting textures and earthy tones create a cohesive look.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Late Night Stroll",
+    "rationale": "Neutral colors and accessories create a sophisticated evening look.",
+    "item_ids": [
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08",
+     "c491cb4c-e720-4488-bb0c-c6667d6b7fce"
+    ]
+   },
+   {
+    "title": "Weekend in the Park",
+    "rationale": "Casual, earthy tones evoke a relaxed weekend vibe.",
+    "item_ids": [
+     "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674"
+    ]
+   }
+  ]
+ },
+ "terracotta-shirt-dress": {
+  "product_id": "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+  "looks": [
+   {
+    "title": "Sunset in the City",
+    "rationale": "Terracotta dress matches with olive cargo pant for a harmonious earthy tone.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "Terracotta dress pairs with beige barrel shoulder bag and navy essential crew tee for a chic and relaxed look.",
+    "item_ids": [
+     "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674",
+     "c36fe2ac-50c4-4bfc-91a8-adbc65e3b699"
+    ]
+   },
+   {
+    "title": "Coffee Shop Stroll",
+    "rationale": "Terracotta dress matches with chestnut Chelsea boot and teal chunky rib beanie for a cozy and laid-back outfit.",
+    "item_ids": [
+     "16a83283-563d-4988-83e0-1b472344f7e9",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   }
+  ]
+ },
+ "linen-rope-belt-dress": {
+  "product_id": "012ea2df-ca57-4aa2-87b1-d90b418c7a4a",
+  "looks": [
+   {
+    "title": "Summer Afternoon",
+    "rationale": "The off-white dress pairs perfectly with the beige bag's earthy tone.",
+    "item_ids": [
+     "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   },
+   {
+    "title": "Sunday Brunch",
+    "rationale": "The cream-colored half-moon bag adds a soft touch to the off-white dress.",
+    "item_ids": [
+     "c79e162a-66ba-46a8-b135-f8419ed077cd",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   },
+   {
+    "title": "Casual Outing",
+    "rationale": "The kraft brown tote and grey chunky pom beanie create a relaxed, casual look with the off-white dress.",
+    "item_ids": [
+     "a3eb4932-1254-42c2-8772-73a1a31c9e6a",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   }
+  ]
+ },
+ "cargo-pant-olive": {
+  "product_id": "77e069fa-c9ad-441d-92a4-f15fce7af660",
+  "looks": [
+   {
+    "title": "Workday Essentials",
+    "rationale": "Complementary earthy tones and functional details",
+    "item_ids": [
+     "40d61580-892b-443d-8240-96ea5a4fc596",
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2",
+     "0148a9a5-be35-408a-9344-d18ed5f129d5"
+    ]
+   },
+   {
+    "title": "Casual Weeknight",
+    "rationale": "Monochromatic colour palette with contrasting textures",
+    "item_ids": [
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "71b2f94d-6d40-41c9-9d12-9321ab1e8c19",
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5"
+    ]
+   },
+   {
+    "title": "Urban Explorer",
+    "rationale": "Bold, contrasting colours and utilitarian details",
+    "item_ids": [
+     "284a788e-8857-4f00-ad65-8cb0303c0c12",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   }
+  ]
+ },
+ "slim-chino-stone": {
+  "product_id": "067e0273-b648-4dfc-b933-2f433e76b653",
+  "looks": [
+   {
+    "title": "Stone Chino Office",
+    "rationale": "Stone chino pairs with black boots and a gold chain for a sharp office look.",
+    "item_ids": [
+     "209d5d2b-7ffb-4853-b718-35366483a666",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   },
+   {
+    "title": "Stone Chino Evening",
+    "rationale": "Stone chino pairs with a terracotta dress and tan boots for a stylish evening look.",
+    "item_ids": [
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "c7b18836-6904-4e7c-a024-0f5701616280",
+     "71b2f94d-6d40-41c9-9d12-9321ab1e8c19"
+    ]
+   },
+   {
+    "title": "Stone Chino Weekday",
+    "rationale": "Stone chino pairs with grey beanie and black sunglasses for a relaxed weekday look.",
+    "item_ids": [
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09"
+    ]
+   }
+  ]
+ },
+ "denim-trucker-jacket": {
+  "product_id": "ad8fcdd0-7429-4f6d-8f81-af21e9bd052f",
+  "looks": [
+   {
+    "title": "Casual Friday",
+    "rationale": "The light wash denim jacket pairs with a casual tee and brown boots for a relaxed weekend look.",
+    "item_ids": [
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4"
+    ]
+   },
+   {
+    "title": "Summer Evening",
+    "rationale": "The light wash denim jacket complements a white dress and adds a layer for a warm summer evening.",
+    "item_ids": [
+     "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "The light wash denim jacket pairs with a lilac top and beige bag for a stylish weekend brunch outfit.",
+    "item_ids": [
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+     "46a1dfb6-a9d2-45c5-945d-14805601f4a8"
+    ]
+   }
+  ]
+ }
+}
