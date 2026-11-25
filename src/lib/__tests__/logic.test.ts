@@ -95,3 +95,24 @@ describe("post-login redirect guard", async () => {
     (v) => expect(safeNext(v)).toBe("/account/"),
   );
 });
+
+describe("outfit rules", async () => {
+  const { slotOf, repairOutfit } = await import("@/lib/ai/outfit");
+  it("classifies the catalogue names", () => {
+    expect(slotOf("Tie-Waist Shirt Dress", "women")).toBe("dress");
+    expect(slotOf("Denim Trucker Jacket", "men")).toBe("outerwear");
+    expect(slotOf("Heavyweight Hoodie", "men")).toBe("top");
+    expect(slotOf("Slim Chino", "men")).toBe("bottom");
+    expect(slotOf("Chunky Pom Beanie", "accessories")).toBe("headwear");
+    expect(slotOf("Chelsea Boot", "shoes")).toBe("shoes");
+    expect(slotOf("Cuban Link Chain", "accessories")).toBe("jewellery");
+  });
+  it("drops a bottom from a dress look and a second beanie", () => {
+    const slots: Record<string, ReturnType<typeof slotOf>> = { chino: "bottom", bag: "bag", b1: "headwear", b2: "headwear", tee: "top" };
+    expect(repairOutfit("dress", ["chino", "bag", "b1", "b2", "tee"], (i) => slots[i]!)).toEqual(["bag", "b1"]);
+  });
+  it("keeps one pair of shoes and a top with a bottom anchor", () => {
+    const slots: Record<string, ReturnType<typeof slotOf>> = { boot: "shoes", sneaker: "shoes", tee: "top", dress: "dress" };
+    expect(repairOutfit("bottom", ["boot", "sneaker", "tee", "dress"], (i) => slots[i]!)).toEqual(["boot", "tee"]);
+  });
+});

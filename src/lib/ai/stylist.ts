@@ -7,7 +7,8 @@ import { z } from "zod";
 import { config } from "@/lib/config";
 import { getLooks, listProducts } from "@/lib/queries";
 import type { Look, ProductSummary } from "@/lib/types";
-import prompt from "./prompts/looks-v1.json";
+import prompt from "./prompts/looks-v2.json";
+import { compatibleWith, repairOutfit, slotOf, type Slot } from "./outfit";
 
 export const looksSchema = z.object({
   looks: z
@@ -24,23 +25,28 @@ export const looksSchema = z.object({
 export type LooksOutput = z.infer<typeof looksSchema>;
 
 /** Validate model output against the candidate whitelist; returns an error message or the cleaned value. */
-export function validateLooks(raw: unknown, candidateIds: Set<string>, productId: string): LooksOutput | string {
+export function validateLooks(
+  raw: unknown,
+  candidateIds: Set<string>,
+  productId: string,
+  outfit?: { anchorSlot: Slot; slotById: Map<string, Slot> },
+): LooksOutput | string {
   const parsed = looksSchema.safeParse(raw);
   if (!parsed.success) return parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
-  const looks = parsed.data.looks.map((l) => ({
-    ...l,
-    item_ids: [...new Set(l.item_ids)].filter((id) => id !== productId && candidateIds.has(id)).slice(0, 4),
-  }));
+  const looks = parsed.data.looks.map((l) => {
+    let ids = [...new Set(l.item_ids)].filter((id) => id !== productId && candidateIds.has(id));
+    if (outfit) ids = repairOutfit(outfit.anchorSlot, ids, (id) => outfit.slotById.get(id) ?? "other");
+    return { ...l, item_ids: ids.slice(0, 4) };
+  });
   if (looks.some((l) => l.item_ids.length < 2)) return "each look needs at least 2 item_ids taken from the candidate list";
   return { looks };
 }
 
 export function buildPrompt(product: ProductSummary & { colour?: string }, candidates: ProductSummary[]) {
-  const lines = candidates.map((c) => `${c.id} | ${c.name} | ${c.category.slug}`).join("\n");
+  const lines = candidates.map((c) => `${c.id} | ${c.name} | ${slotOf(c.name, c.category.slug)} | see name`).join("\n");
   const user = prompt.user_template
     .replace("{name}", product.name)
-    .replace("{category}", product.category.slug)
-    .replace("{sub}", product.category.name)
+    .replace("{slot}", slotOf(product.name, product.category.slug))
     .replace("{colour}", product.colour ?? "see name")
     .replace("{price}", (product.price_cents / 100).toFixed(2))
     .replace("{candidates}", lines);
@@ -71,21 +77,24 @@ async function callOllama(system: string, user: string, signal: AbortSignal): Pr
 
 /** Local mode only: generate fresh looks with the local model. 20 s budget by default (ux-spec; raise NEXT_PUBLIC_AI_TIMEOUT_MS on CPU), one corrective retry. */
 export async function generateLooksLocal(product: ProductSummary): Promise<Look[]> {
+  const anchorSlot = slotOf(product.name, product.category.slug);
   const others = (await listProducts({ limit: 60, excludeId: product.id })).items.filter(
-    (p) => p.category.slug !== product.category.slug && p.totalStock > 0,
+    (p) => p.totalStock > 0 && compatibleWith(anchorSlot, slotOf(p.name, p.category.slug)),
   );
   const candidates = others.slice(0, 40);
   const ids = new Set(candidates.map((c) => c.id));
+  const outfit = { anchorSlot, slotById: new Map(candidates.map((c) => [c.id, slotOf(c.name, c.category.slug)] as [string, Slot])) };
   const { system, user } = buildPrompt(product, candidates);
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), config.aiTimeoutMs);
   try {
-    let result = validateLooks(await callOllama(system, user, ctrl.signal), ids, product.id);
+    let result = validateLooks(await callOllama(system, user, ctrl.signal), ids, product.id, outfit);
     if (typeof result === "string") {
       result = validateLooks(
         await callOllama(system, `${user}\n\nYour previous answer was invalid: ${result}. Fix it.`, ctrl.signal),
         ids,
         product.id,
+        outfit,
       );
     }
     if (typeof result === "string") throw new Error(result);

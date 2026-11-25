@@ -919,5 +919,37 @@
     ]
    }
   ]
+ },
+ "canvas-tote-sand": {
+  "product_id": "bb541292-07d7-4b1b-8177-de138f1d949d",
+  "looks": [
+   {
+    "title": "Summer Afternoon",
+    "rationale": "Sand tote complements the light wash blue dress and adds a casual touch.",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12"
+    ]
+   },
+   {
+    "title": "Weekend Getaway",
+    "rationale": "Sand tote pairs with the olive utility pant and adds a relaxed vibe.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Casual Coffee Date",
+    "rationale": "Sand tote matches the earthy tone of the brown lace-up combat boot and adds a laid-back feel.",
+    "item_ids": [
+     "c7b18836-6904-4e7c-a024-0f5701616280",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9"
+    ]
+   }
+  ]
  }
 }
