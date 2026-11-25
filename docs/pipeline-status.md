@@ -27,14 +27,15 @@ Maintained by `project-autopilot`. Resume any time with "resume autopilot".
 | 3 | UX + Figma | blocked (Figma MCP not authenticated) | docs/design/ux-spec.md done; Figma file pending auth; building from spec + tokens (D-012) | 2026-11-25 |
 | 4 | Architecture | done | docs/architecture/system-overview.md (data model 11 tables, RLS matrix, 4 RPCs, AI pipeline, Pages deploy), docs/security/threat-model.md (12 threats + mitigations/verification), D-006..D-008 | 2026-11-25 |
 | 5 | Repo + backend | partial: backend done, repo blocked (GH_TOKEN invalid) | 3 migrations applied (schema+RLS, storage, private helpers); advisors: no security errors (only the 3 intentional definer RPCs); types generated; seed: 40 products, 163 variants, 120 images; local git on feat/scaffold | 2026-11-25 |
-| 6 | Build | in-progress | 16 static routes; `npm run typecheck` 0 errors, `lint` 0 errors, `test` 31/31, `build` OK; local Playwright smoke of export under /ruelook: home, tabs, shop filters/search, PDP size validation + bag, checkout → order request, admin guard all pass; AI looks generating (gen_looks.py) | 2026-11-25 |
-| 7 | QA + security | pending | | |
-| 8 | Deploy | pending | | |
-| 9 | Deliverables | pending | | |
-| 10 | Showcase (Behance → LinkedIn → Instagram → TikTok) | pending | | |
+| 6 | Build | done (AI looks data pending) | 16 static routes; lint 0 errors, typecheck 0, unit 42/42, build OK; looks-v2 + outfit rules (D-014). `ai_looks` is empty: the v2 generation run was stopped by the system for low memory; the PDP hides the Stylist until it is seeded (AC-8 fallback) | 2026-11-25 |
+| 7 | QA + security | done locally; live checks pending | docs/test-plan.md: e2e 19 passed / 1 skipped (desktop+mobile), RLS suite 32/32, npm audit 0, open-redirect fix, role-guard bug fixed (migration 000004). Live LCP/fps/contrast need the deployed site | 2026-11-25 |
+| 8 | Deploy | blocked (GitHub auth) | Workflows ready: ci.yml, deploy-pages.yml (+ live Playwright smoke job); runbook in docs/deliverables/README.md | 2026-11-25 |
+| 9 | Deliverables | drafted | docs/deliverables/README.md (links, runbooks, known issues), README.md with real screenshots; live/repo/Figma links pending | 2026-11-25 |
+| 10 | Showcase (Behance → LinkedIn → Instagram → TikTok) | blocked | Needs the live app (captures) and seeded AI looks (key feature) | 2026-11-25 |
 | 11 | Retrospective | pending | | |
 
 ## Blockers & decisions needed
+- AI looks: rerun `OLLAMA_NUM_GPU=0 python scripts/seed/gen_looks.py` (about 1 h on CPU; the last run was stopped by the system for low memory), review, then seed `supabase/seed/ai_looks.sql`
 - Fix GitHub auth (remove/replace invalid GH_TOKEN, `gh auth login --scopes repo,workflow`) before phase 5 (rechecked 2026-11-25: still ❌; CI, PRs and Pages deploy wait on this)
 - Authenticate Figma MCP (`/mcp` → figma) before phase 3 (rechecked 2026-11-25: still ❌)
 - Demo admin account: freelancer signs up in the app, then the autopilot sets `profiles.role = 'admin'` via SQL (no passwords handled by the autopilot)
