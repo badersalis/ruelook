@@ -347,5 +347,481 @@
     ]
    }
   ]
+ },
+ "quilted-jacket-cobalt": {
+  "product_id": "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+  "looks": [
+   {
+    "title": "Cold Morning Commute",
+    "rationale": "The cobalt blue jacket pairs well with earthy tones and casual accessories.",
+    "item_ids": [
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "The cobalt blue jacket complements the light wash blue dress and adds a pop of colour.",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452",
+     "0148a9a5-be35-408a-9344-d18ed5f129d5"
+    ]
+   },
+   {
+    "title": "Urban Night Out",
+    "rationale": "The cobalt blue jacket pairs well with dark accessories and a hint of sportswear.",
+    "item_ids": [
+     "284a788e-8857-4f00-ad65-8cb0303c0c12",
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "46a1dfb6-a9d2-45c5-945d-14805601f4a8"
+    ]
+   }
+  ]
+ },
+ "pocket-tee-heather": {
+  "product_id": "c36fe2ac-50c4-4bfc-91a8-adbc65e3b699",
+  "looks": [
+   {
+    "title": "Weekend Brunch",
+    "rationale": "The rust orange beanie matches the warm tone of the Chelsea Boot.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "209d5d2b-7ffb-4853-b718-35366483a666"
+    ]
+   },
+   {
+    "title": "Casual Office",
+    "rationale": "The black sunglasses add a touch of sophistication to the outfit.",
+    "item_ids": [
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "67ba88df-d68f-4088-a091-28a1a83a124f"
+    ]
+   },
+   {
+    "title": "Summer Date",
+    "rationale": "The beige barrel bag complements the earthy tones of the outfit.",
+    "item_ids": [
+     "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2"
+    ]
+   }
+  ]
+ },
+ "crew-tee-navy": {
+  "product_id": "7eb1b1b7-4e49-4ea6-aab3-58e64adce674",
+  "looks": [
+   {
+    "title": "Weekend in Osu",
+    "rationale": "Navy tee pairs with earthy tones to create a casual look",
+    "item_ids": [
+     "c79e162a-66ba-46a8-b135-f8419ed077cd",
+     "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+     "16a83283-563d-4988-83e0-1b472344f7e9"
+    ]
+   },
+   {
+    "title": "Late Studio Hours",
+    "rationale": "Navy tee pairs with neutral accessories to create a relaxed look",
+    "item_ids": [
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "67ba88df-d68f-4088-a091-28a1a83a124f"
+    ]
+   },
+   {
+    "title": "Summer Afternoon",
+    "rationale": "Navy tee pairs with light wash denim to create a casual summer look",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "40d61580-892b-443d-8240-96ea5a4fc596",
+     "1a98348f-41ae-4182-abfe-a2283c11f9ae"
+    ]
+   }
+  ]
+ },
+ "pullover-hoodie-yellow": {
+  "product_id": "5f0d6c38-df85-4f86-a415-c0cce17a4958",
+  "looks": [
+   {
+    "title": "Summer Vibes",
+    "rationale": "The sun yellow hue of the pullover hoodie pairs perfectly with the light wash blue off-shoulder denim dress and the chunky rib beanie adds a pop of colour.",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a"
+    ]
+   },
+   {
+    "title": "Streetwear Chic",
+    "rationale": "The earthy tones of the pullover hoodie complement the terracotta tie-waist shirt dress and the suede court sneaker adds a stylish touch.",
+    "item_ids": [
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2"
+    ]
+   },
+   {
+    "title": "Casual Weekend",
+    "rationale": "The relaxed fit of the pullover hoodie works well with the off-white linen rope-belt mini dress and the chunky pom beanie adds a playful touch.",
+    "item_ids": [
+     "012ea2df-ca57-4aa2-87b1-d90b418c7a4a",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4"
+    ]
+   }
+  ]
+ },
+ "heavyweight-hoodie-black": {
+  "product_id": "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+  "looks": [
+   {
+    "title": "Winter Layering",
+    "rationale": "Black hoodie pairs well with earthy tones",
+    "item_ids": [
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08"
+    ]
+   },
+   {
+    "title": "Casual Friday",
+    "rationale": "Black hoodie matches with casual denim",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "1a98348f-41ae-4182-abfe-a2283c11f9ae",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Streetwear Chic",
+    "rationale": "Black hoodie pairs with bold accessories",
+    "item_ids": [
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12",
+     "46a1dfb6-a9d2-45c5-945d-14805601f4a8"
+    ]
+   }
+  ]
+ },
+ "suede-court-gum": {
+  "product_id": "73c8e7ab-faa6-4f15-9698-e766c8686df2",
+  "looks": [
+   {
+    "title": "Lazy Sundays",
+    "rationale": "Soft, casual pieces for a relaxed occasion",
+    "item_ids": [
+     "5f0d6c38-df85-4f86-a415-c0cce17a4958",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Grunge Revival",
+    "rationale": "Dark, edgy pieces for a bold look",
+    "item_ids": [
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Summer Vibes",
+    "rationale": "Light, airy pieces for a warm occasion",
+    "item_ids": [
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20",
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452"
+    ]
+   }
+  ]
+ },
+ "canvas-low-red": {
+  "product_id": "46a1dfb6-a9d2-45c5-945d-14805601f4a8",
+  "looks": [
+   {
+    "title": "Urban Weekend",
+    "rationale": "Red sneakers add a pop of colour to a neutral outfit.",
+    "item_ids": [
+     "67ba88df-d68f-4088-a091-28a1a83a124f",
+     "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Casual Date",
+    "rationale": "Rust orange beanie and lilac tee create a playful contrast with red sneakers.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "67ba88df-d68f-4088-a091-28a1a83a124f"
+    ]
+   },
+   {
+    "title": "Street Style",
+    "rationale": "Red sneakers and olive cargo pants create a bold, streetwear-inspired look.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   }
+  ]
+ },
+ "combat-boot-brown": {
+  "product_id": "c7b18836-6904-4e7c-a024-0f5701616280",
+  "looks": [
+   {
+    "title": "Urban Explorer",
+    "rationale": "Brown boots match with earthy tones",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660"
+    ]
+   },
+   {
+    "title": "City Streets",
+    "rationale": "Brown boots contrast with bold color",
+    "item_ids": [
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Casual Afternoon",
+    "rationale": "Brown boots work with natural fabrics",
+    "item_ids": [
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5",
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "bb541292-07d7-4b1b-8177-de138f1d949d"
+    ]
+   }
+  ]
+ },
+ "brogue-boot-tan": {
+  "product_id": "1a98348f-41ae-4182-abfe-a2283c11f9ae",
+  "looks": [
+   {
+    "title": "City Streets",
+    "rationale": "Tan boot complements earthy tones of the Cognac rucksack and Olive cargo pant",
+    "item_ids": [
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "Tan boot pairs with warm tones of the Terracotta dress and Honey brown jacket",
+    "item_ids": [
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Night Out",
+    "rationale": "Tan boot stands out with bold tones of the Orange crop top and Teal beanie",
+    "item_ids": [
+     "78bdbb4c-9a25-492b-b30b-d3737926b79d",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   }
+  ]
+ },
+ "chelsea-boot-black": {
+  "product_id": "209d5d2b-7ffb-4853-b718-35366483a666",
+  "looks": [
+   {
+    "title": "Autumn Afternoon",
+    "rationale": "Earthy tones and textures",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Minimal Chic",
+    "rationale": "Monochromatic palette and clean lines",
+    "item_ids": [
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "71b2f94d-6d40-41c9-9d12-9321ab1e8c19",
+     "284a788e-8857-4f00-ad65-8cb0303c0c12"
+    ]
+   },
+   {
+    "title": "Urban Explorer",
+    "rationale": "Contrasting textures and earthy accents",
+    "item_ids": [
+     "067e0273-b648-4dfc-b933-2f433e76b653",
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   }
+  ]
+ },
+ "chelsea-boot-brown": {
+  "product_id": "16a83283-563d-4988-83e0-1b472344f7e9",
+  "looks": [
+   {
+    "title": "Lazy Sunday",
+    "rationale": "Neutral tones and textures for a relaxed look",
+    "item_ids": [
+     "40d61580-892b-443d-8240-96ea5a4fc596",
+     "067e0273-b648-4dfc-b933-2f433e76b653",
+     "0148a9a5-be35-408a-9344-d18ed5f129d5"
+    ]
+   },
+   {
+    "title": "Urban Explorer",
+    "rationale": "Earth tones and utility-inspired pieces for an urban look",
+    "item_ids": [
+     "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "77e069fa-c9ad-441d-92a4-f15fce7af660"
+    ]
+   },
+   {
+    "title": "Night Out",
+    "rationale": "Bold and eye-catching pieces for a night out",
+    "item_ids": [
+     "78bdbb4c-9a25-492b-b30b-d3737926b79d",
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   }
+  ]
+ },
+ "slouch-boot-black": {
+  "product_id": "c491cb4c-e720-4488-bb0c-c6667d6b7fce",
+  "looks": [
+   {
+    "title": "Winter Layering",
+    "rationale": "Black hoodies pair well with slouchy boots for a winter outfit.",
+    "item_ids": [
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a",
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08"
+    ]
+   },
+   {
+    "title": "Work-Chic",
+    "rationale": "A black blazer and utility boots create a sharp work outfit.",
+    "item_ids": [
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "40d61580-892b-443d-8240-96ea5a4fc596",
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "A casual pair of jeans and slouchy boots is perfect for a weekend brunch.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "6de30f1f-f568-4c53-b2b4-10ba8a5e9452"
+    ]
+   }
+  ]
+ },
+ "cap-toe-lace-boot": {
+  "product_id": "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+  "looks": [
+   {
+    "title": "Osu Night Out",
+    "rationale": "Dark brown boots match the earthy tones of the olive utility pant and the heather grey tee.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "c36fe2ac-50c4-4bfc-91a8-adbc65e3b699",
+     "067e0273-b648-4dfc-b933-2f433e76b653"
+    ]
+   },
+   {
+    "title": "Urban Explorer",
+    "rationale": "Dark brown boots complement the stone-coloured chino and the cobalt blue quilted zip jacket.",
+    "item_ids": [
+     "067e0273-b648-4dfc-b933-2f433e76b653",
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "a125cedd-7e92-40ba-ac6f-4c723cce4d08"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "Dark brown boots pair well with the light wash denim dress and the gold tone fine chain necklace set.",
+    "item_ids": [
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   }
+  ]
+ },
+ "half-moon-sling": {
+  "product_id": "c79e162a-66ba-46a8-b135-f8419ed077cd",
+  "looks": [
+   {
+    "title": "Casual Weekend",
+    "rationale": "Cream bag complements the earthy tone of the Utility Cargo Pant and the dark brown Cap-Toe Lace-Up Boot.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "067e0273-b648-4dfc-b933-2f433e76b653"
+    ]
+   },
+   {
+    "title": "Summer Concert",
+    "rationale": "The Half-Moon Sling Bag's cream color pairs well with the Rust orange Chunky Pom Beanie and the Lilac Ribbed Cropped Tee.",
+    "item_ids": [
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "067e0273-b648-4dfc-b933-2f433e76b653"
+    ]
+   },
+   {
+    "title": "Outdoor Adventure",
+    "rationale": "The earthy tone of the Olive Utility Cargo Pant and the Brown Lace-Up Combat Boot match the warm tone of the Cream Half-Moon Sling Bag.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "c7b18836-6904-4e7c-a024-0f5701616280",
+     "067e0273-b648-4dfc-b933-2f433e76b653"
+    ]
+   }
+  ]
+ },
+ "barrel-shoulder-bag": {
+  "product_id": "2b05de5f-bb53-4e5d-9816-84f9ad2bdbe4",
+  "looks": [
+   {
+    "title": "Summer Afternoon Stroll",
+    "rationale": "The beige Barrel Shoulder Bag complements the earthy tones of the Utility Cargo Pant and the Olive colour.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8",
+     "6146d9f8-f7cd-4d50-92fe-f5b49d393f20"
+    ]
+   },
+   {
+    "title": "Weekend Brunch",
+    "rationale": "The beige Barrel Shoulder Bag pairs nicely with the light wash of the Denim Trucker Jacket and the Off-Shoulder Denim Dress.",
+    "item_ids": [
+     "ad8fcdd0-7429-4f6d-8f81-af21e9bd052f",
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b",
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2"
+    ]
+   },
+   {
+    "title": "Casual Night Out",
+    "rationale": "The beige Barrel Shoulder Bag matches the earthy tone of the Suede Court Sneaker and the Ribbed Cropped Tee.",
+    "item_ids": [
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2",
+     "6a790c46-62ca-4e71-b254-d96ea861f922",
+     "c6635615-4e50-4559-b3bb-3f51a29ae5e5"
+    ]
+   }
+  ]
  }
 }
