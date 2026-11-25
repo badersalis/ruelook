@@ -11,6 +11,8 @@ export const config = {
   aiMode: (process.env.NEXT_PUBLIC_AI_MODE === "local" ? "local" : "demo") as "local" | "demo",
   aiBaseUrl: process.env.NEXT_PUBLIC_AI_BASE_URL || "http://localhost:11434",
   aiModel: process.env.NEXT_PUBLIC_AI_MODEL || "llama3.1:8b",
+  aiNumGpu: process.env.NEXT_PUBLIC_AI_NUM_GPU ? Number(process.env.NEXT_PUBLIC_AI_NUM_GPU) : undefined,
+  aiTimeoutMs: Number(process.env.NEXT_PUBLIC_AI_TIMEOUT_MS) || 20_000,
   storageBucket: "product-images",
 } as const;
 

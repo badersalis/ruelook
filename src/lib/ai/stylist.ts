@@ -56,7 +56,8 @@ async function callOllama(system: string, user: string, signal: AbortSignal): Pr
       model: config.aiModel,
       format: "json",
       stream: false,
-      options: { temperature: 0.7 },
+      // num_gpu: 0 forces CPU (workaround for GPUs that fail CUDA JIT); unset = Ollama default
+      options: { temperature: 0.7, ...(config.aiNumGpu !== undefined ? { num_gpu: config.aiNumGpu } : {}) },
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },
@@ -68,7 +69,7 @@ async function callOllama(system: string, user: string, signal: AbortSignal): Pr
   return JSON.parse(body.message?.content ?? "{}");
 }
 
-/** Local mode only: generate fresh looks with the local model. 20 s budget (ux-spec), one corrective retry. */
+/** Local mode only: generate fresh looks with the local model. 20 s budget by default (ux-spec; raise NEXT_PUBLIC_AI_TIMEOUT_MS on CPU), one corrective retry. */
 export async function generateLooksLocal(product: ProductSummary): Promise<Look[]> {
   const others = (await listProducts({ limit: 60, excludeId: product.id })).items.filter(
     (p) => p.category.slug !== product.category.slug && p.totalStock > 0,
@@ -77,7 +78,7 @@ export async function generateLooksLocal(product: ProductSummary): Promise<Look[
   const ids = new Set(candidates.map((c) => c.id));
   const { system, user } = buildPrompt(product, candidates);
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 20_000);
+  const timer = setTimeout(() => ctrl.abort(), config.aiTimeoutMs);
   try {
     let result = validateLooks(await callOllama(system, user, ctrl.signal), ids, product.id);
     if (typeof result === "string") {

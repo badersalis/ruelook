@@ -86,3 +86,12 @@ describe("admin", () => {
     expect(NEXT_STATUS.completed).toEqual([]);
   });
 });
+
+describe("post-login redirect guard", async () => {
+  const { safeNext } = await import("@/components/store/AuthForm");
+  it("keeps same-site paths", () => expect(safeNext("/product/?slug=x")).toBe("/product/?slug=x"));
+  it.each([null, "https://evil.example", "//evil.example", "/\\evil.example", "/\\/evil", "javascript:alert(1)", "/ok\nSet-Cookie"])(
+    "rejects %s",
+    (v) => expect(safeNext(v)).toBe("/account/"),
+  );
+});

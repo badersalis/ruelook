@@ -823,5 +823,101 @@
     ]
    }
   ]
+ },
+ "zip-belt-bag-black": {
+  "product_id": "71b2f94d-6d40-41c9-9d12-9321ab1e8c19",
+  "looks": [
+   {
+    "title": "Weekend in Osu",
+    "rationale": "Contrasting textures and earthy tones",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "1a98348f-41ae-4182-abfe-a2283c11f9ae",
+     "43d2ba7b-3a55-4c07-adc4-66de790359c8"
+    ]
+   },
+   {
+    "title": "Late Studio Hours",
+    "rationale": "Monochromatic black palette",
+    "item_ids": [
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9",
+     "209d5d2b-7ffb-4853-b718-35366483a666",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Summer Afternoon",
+    "rationale": "Warm colours and relaxed fit",
+    "item_ids": [
+     "067e0273-b648-4dfc-b933-2f433e76b653",
+     "78bdbb4c-9a25-492b-b30b-d3737926b79d",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   }
+  ]
+ },
+ "mini-satchel-grey": {
+  "product_id": "67ba88df-d68f-4088-a091-28a1a83a124f",
+  "looks": [
+   {
+    "title": "Weekend in Osu",
+    "rationale": "Grey satchel matches the grey socks",
+    "item_ids": [
+     "0148a9a5-be35-408a-9344-d18ed5f129d5",
+     "209d5d2b-7ffb-4853-b718-35366483a666",
+     "353c7d68-e3f8-41fc-9e8f-b30c05e4833a"
+    ]
+   },
+   {
+    "title": "Late Studio Hours",
+    "rationale": "Grey satchel complements the dark brown boots and black blazer",
+    "item_ids": [
+     "109fcc41-f4aa-4f58-82ef-609c8d1823e4",
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "5ea84e85-38f9-445c-b17f-5ecda84e08d9"
+    ]
+   },
+   {
+    "title": "Cobalt Studio",
+    "rationale": "Grey satchel pairs with cobalt blue jacket and off-white sneakers",
+    "item_ids": [
+     "fd31a1e5-fcb7-43bc-b34f-22c977e34897",
+     "73c8e7ab-faa6-4f15-9698-e766c8686df2",
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674"
+    ]
+   }
+  ]
+ },
+ "leather-messenger": {
+  "product_id": "40d61580-892b-443d-8240-96ea5a4fc596",
+  "looks": [
+   {
+    "title": "Casual Summer Day",
+    "rationale": "Tan leather messenger bag pairs with olive pants and navy crew tee for a relaxed summer look.",
+    "item_ids": [
+     "77e069fa-c9ad-441d-92a4-f15fce7af660",
+     "7eb1b1b7-4e49-4ea6-aab3-58e64adce674",
+     "067e0273-b648-4dfc-b933-2f433e76b653"
+    ]
+   },
+   {
+    "title": "Work in Progress",
+    "rationale": "Tan leather messenger bag complements black blazer and white ink-blot wrap dress for a professional touch.",
+    "item_ids": [
+     "2ea7fc0f-f0e5-42ec-a214-e5b32eb4b13a",
+     "3b315aa5-51e7-439d-a5c4-649ab971a36e",
+     "840a94fe-4929-46c5-8cfd-a12be0a0cc6b"
+    ]
+   },
+   {
+    "title": "Weekend Getaway",
+    "rationale": "Tan leather messenger bag pairs with terracotta tie-waist shirt dress and chunky pom beanie for a relaxed weekend look.",
+    "item_ids": [
+     "faac51a7-fad0-47f0-9221-07eded4bf1ff",
+     "ea86068e-0038-44f4-b77d-29f44bdfce09",
+     "c36fe2ac-50c4-4bfc-91a8-adbc65e3b699"
+    ]
+   }
+  ]
  }
 }

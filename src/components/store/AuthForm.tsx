@@ -20,8 +20,9 @@ function friendly(msg: string): string {
 }
 
 /** Only allow same-site relative paths as post-login destinations. */
-function safeNext(next: string | null): string {
-  if (!next || !next.startsWith("/") || next.startsWith("//")) return "/account/";
+export function safeNext(next: string | null): string {
+  // Reject protocol-relative ("//x", "/\x"), schemes and control characters (open-redirect guard, T9)
+  if (!next || !next.startsWith("/") || /^\/[/\\]/.test(next) || /[\\\u0000-\u001f]/.test(next)) return "/account/";
   return next;
 }
 
